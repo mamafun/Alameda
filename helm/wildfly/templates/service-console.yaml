@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "wildfly.fullname" . }}-console
+  labels:
+    app.kubernetes.io/name: {{ include "wildfly.name" . }}
+    helm.sh/chart: {{ include "wildfly.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.web.type }}
+  ports:
+    - port: {{ .Values.service.console.port }}
+      targetPort: console
+      protocol: TCP
+      name: console
+  selector:
+    app.kubernetes.io/name: {{ include "wildfly.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

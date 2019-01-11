@@ -1,0 +1,104 @@
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: webapp1
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: wildfly
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: webapp2
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: wildfly
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: webapp3
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: wildfly
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: webapp4
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: wildfly
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: database1
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app: rousing-cat-mysql
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: database2
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app: volted-jackal-mysql
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: database3
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app: ugly-fox-mysql
+
+---
+apiVersion: autoscaling.containers.ai/v1alpha1
+kind: AlamedaScaler
+metadata:
+  name: alameda
+  namespace: database4
+spec:
+  policy: stable
+  enable: true
+  selector:
+    matchLabels:
+      app: loitering-sabertooth-mysql
+
