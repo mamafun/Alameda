@@ -6,6 +6,7 @@ import (
 	"github.com/containers-ai/alameda/datahub/pkg/dao"
 	"github.com/containers-ai/alameda/datahub/pkg/kubernetes/metadata"
 	"github.com/containers-ai/alameda/datahub/pkg/metric"
+	datahub_v1alpha1 "github.com/containers-ai/api/alameda_api/v1alpha1/datahub"
 )
 
 // IsScheduled Specified if the node prediction is scheduled
@@ -13,31 +14,37 @@ type IsScheduled = bool
 
 // DAO DAO interface of prediction
 type DAO interface {
-	ListPodPredictions(ListPodPredictionsRequest) (*PodsPredictionMap, error)
-	ListNodePredictions(ListNodePredictionsRequest) (*NodesPredictionMap, error)
-	CreateContainerPredictions([]*ContainerPrediction) error
-	CreateNodePredictions([]*NodePrediction) error
+	ListPodPredictions(ListPodPredictionsRequest) ([]*datahub_v1alpha1.PodPrediction, error)
+	CreateContainerPredictions(in *datahub_v1alpha1.CreatePodPredictionsRequest) error
+	FillPodPredictions(predictions []*datahub_v1alpha1.PodPrediction, fillDays int64) error
+
+	ListNodePredictions(ListNodePredictionsRequest) ([]*datahub_v1alpha1.NodePrediction, error)
+	CreateNodePredictions(in *datahub_v1alpha1.CreateNodePredictionsRequest) error
 }
 
 // ListPodPredictionsRequest ListPodPredictionsRequest
 type ListPodPredictionsRequest struct {
-	Namespace string
-	PodName   string
+	Namespace   string
+	PodName     string
+	Granularity int64
 	dao.QueryCondition
 }
 
 // ListNodePredictionsRequest ListNodePredictionsRequest
 type ListNodePredictionsRequest struct {
-	NodeNames []string
+	NodeNames   []string
+	Granularity int64
 	dao.QueryCondition
 }
 
 // ContainerPrediction Prediction model to represent one container Prediction
 type ContainerPrediction struct {
-	Namespace     metadata.NamespaceName
-	PodName       metadata.PodName
-	ContainerName metadata.ContainerName
-	Predictions   map[metric.ContainerMetricType][]metric.Sample
+	Namespace        metadata.NamespaceName
+	PodName          metadata.PodName
+	ContainerName    metadata.ContainerName
+	PredictionsRaw   map[metric.ContainerMetricType][]metric.Sample
+	PredictionsUpper map[metric.ContainerMetricType][]metric.Sample
+	PredictionsLower map[metric.ContainerMetricType][]metric.Sample
 }
 
 // BuildPodPrediction Build PodPrediction consist of the receiver in ContainersPredictionMap.
@@ -80,8 +87,14 @@ func (c *ContainersPredictionMap) Merge(in *ContainersPredictionMap) {
 
 	for namespacePodContainerName, containerPrediction := range *in {
 		if existedContainerPrediction, exist := (*c)[namespacePodContainerName]; exist {
-			for metricType, predictions := range containerPrediction.Predictions {
-				existedContainerPrediction.Predictions[metricType] = append(existedContainerPrediction.Predictions[metricType], predictions...)
+			for metricType, predictions := range containerPrediction.PredictionsRaw {
+				existedContainerPrediction.PredictionsRaw[metricType] = append(existedContainerPrediction.PredictionsRaw[metricType], predictions...)
+			}
+			for metricType, predictions := range containerPrediction.PredictionsUpper {
+				existedContainerPrediction.PredictionsUpper[metricType] = append(existedContainerPrediction.PredictionsUpper[metricType], predictions...)
+			}
+			for metricType, predictions := range containerPrediction.PredictionsLower {
+				existedContainerPrediction.PredictionsLower[metricType] = append(existedContainerPrediction.PredictionsLower[metricType], predictions...)
 			}
 			(*c)[namespacePodContainerName] = existedContainerPrediction
 		} else {

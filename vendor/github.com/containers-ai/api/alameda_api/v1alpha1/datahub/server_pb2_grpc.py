@@ -41,6 +41,11 @@ class DatahubServiceStub(object):
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListNodesRequest.SerializeToString,
         response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListNodesResponse.FromString,
         )
+    self.ListControllers = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListControllers',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListControllersRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListControllersResponse.FromString,
+        )
     self.ListPodPredictions = channel.unary_unary(
         '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListPodPredictions',
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListPodPredictionsRequest.SerializeToString,
@@ -81,6 +86,11 @@ class DatahubServiceStub(object):
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.CreatePodsRequest.SerializeToString,
         response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
         )
+    self.CreateControllers = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/CreateControllers',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.CreateControllersRequest.SerializeToString,
+        response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
+        )
     self.CreateAlamedaNodes = channel.unary_unary(
         '/containers_ai.alameda.v1alpha1.datahub.DatahubService/CreateAlamedaNodes',
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.CreateAlamedaNodesRequest.SerializeToString,
@@ -116,10 +126,55 @@ class DatahubServiceStub(object):
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.DeletePodsRequest.SerializeToString,
         response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
         )
+    self.DeleteControllers = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/DeleteControllers',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.DeleteControllersRequest.SerializeToString,
+        response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
+        )
     self.DeleteAlamedaNodes = channel.unary_unary(
         '/containers_ai.alameda.v1alpha1.datahub.DatahubService/DeleteAlamedaNodes',
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.DeleteAlamedaNodesRequest.SerializeToString,
         response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
+        )
+    self.ListWeaveScopeHosts = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeHosts',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeHostsRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.GetWeaveScopeHostDetails = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopeHostDetails',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeHostsRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.ListWeaveScopePods = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopePods',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopePodsRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.GetWeaveScopePodDetails = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopePodDetails',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopePodsRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.ListWeaveScopeContainers = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainers',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.ListWeaveScopeContainersByHostname = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainersByHostname',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.ListWeaveScopeContainersByImage = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainersByImage',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
+        )
+    self.GetWeaveScopeContainerDetails = channel.unary_unary(
+        '/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopeContainerDetails',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.FromString,
         )
 
 
@@ -159,6 +214,13 @@ class DatahubServiceServicer(object):
   def ListNodes(self, request, context):
     """Used to list nodes' information
     """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListControllers(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -219,6 +281,13 @@ class DatahubServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CreateControllers(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def CreateAlamedaNodes(self, request, context):
     """Used to add nodes that need to be predicted
     """
@@ -268,9 +337,72 @@ class DatahubServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def DeleteControllers(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def DeleteAlamedaNodes(self, request, context):
     """Used to stop generating predictions for the nodes
     """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListWeaveScopeHosts(self, request, context):
+    """weave scope--------------------------------------------------
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetWeaveScopeHostDetails(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListWeaveScopePods(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetWeaveScopePodDetails(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListWeaveScopeContainers(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListWeaveScopeContainersByHostname(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListWeaveScopeContainersByImage(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetWeaveScopeContainerDetails(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -302,6 +434,11 @@ def add_DatahubServiceServicer_to_server(servicer, server):
           servicer.ListNodes,
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListNodesRequest.FromString,
           response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListNodesResponse.SerializeToString,
+      ),
+      'ListControllers': grpc.unary_unary_rpc_method_handler(
+          servicer.ListControllers,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListControllersRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListControllersResponse.SerializeToString,
       ),
       'ListPodPredictions': grpc.unary_unary_rpc_method_handler(
           servicer.ListPodPredictions,
@@ -343,6 +480,11 @@ def add_DatahubServiceServicer_to_server(servicer, server):
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.CreatePodsRequest.FromString,
           response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
       ),
+      'CreateControllers': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateControllers,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.CreateControllersRequest.FromString,
+          response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
+      ),
       'CreateAlamedaNodes': grpc.unary_unary_rpc_method_handler(
           servicer.CreateAlamedaNodes,
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.CreateAlamedaNodesRequest.FromString,
@@ -378,10 +520,55 @@ def add_DatahubServiceServicer_to_server(servicer, server):
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.DeletePodsRequest.FromString,
           response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
       ),
+      'DeleteControllers': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteControllers,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.DeleteControllersRequest.FromString,
+          response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
+      ),
       'DeleteAlamedaNodes': grpc.unary_unary_rpc_method_handler(
           servicer.DeleteAlamedaNodes,
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.DeleteAlamedaNodesRequest.FromString,
           response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
+      ),
+      'ListWeaveScopeHosts': grpc.unary_unary_rpc_method_handler(
+          servicer.ListWeaveScopeHosts,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeHostsRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'GetWeaveScopeHostDetails': grpc.unary_unary_rpc_method_handler(
+          servicer.GetWeaveScopeHostDetails,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeHostsRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'ListWeaveScopePods': grpc.unary_unary_rpc_method_handler(
+          servicer.ListWeaveScopePods,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopePodsRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'GetWeaveScopePodDetails': grpc.unary_unary_rpc_method_handler(
+          servicer.GetWeaveScopePodDetails,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopePodsRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'ListWeaveScopeContainers': grpc.unary_unary_rpc_method_handler(
+          servicer.ListWeaveScopeContainers,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'ListWeaveScopeContainersByHostname': grpc.unary_unary_rpc_method_handler(
+          servicer.ListWeaveScopeContainersByHostname,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'ListWeaveScopeContainersByImage': grpc.unary_unary_rpc_method_handler(
+          servicer.ListWeaveScopeContainersByImage,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
+      ),
+      'GetWeaveScopeContainerDetails': grpc.unary_unary_rpc_method_handler(
+          servicer.GetWeaveScopeContainerDetails,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.ListWeaveScopeContainersRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_server__pb2.WeaveScopeResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

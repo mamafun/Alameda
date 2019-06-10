@@ -101,6 +101,16 @@ message ListNodesResponse {
     repeated Node nodes = 2;
 }
 
+message ListControllersRequest {
+    NamespacedName namespaced_name = 1;
+    QueryCondition query_condition = 2;
+}
+
+message ListControllersResponse {
+    google.rpc.Status status = 1;
+    repeated Controller controllers = 2;
+}
+
 /**
  * Represents a request for listing predictions of pods
  * 
@@ -108,6 +118,8 @@ message ListNodesResponse {
 message ListPodPredictionsRequest {
     NamespacedName namespaced_name = 1;
     QueryCondition query_condition = 2;
+    int64 granularity = 3;
+    int64 fill_days   = 4;
 }
 
 /**
@@ -126,6 +138,7 @@ message ListPodPredictionsResponse {
 message ListNodePredictionsRequest {
     repeated string node_names = 1;
     QueryCondition query_condition = 2;
+    int64 granularity = 3;
 }
 
 /**
@@ -145,6 +158,7 @@ message ListPodRecommendationsRequest {
     NamespacedName namespaced_name = 1;
     QueryCondition query_condition = 2;
     Kind kind = 3;
+    int64 granularity = 4;
 }
 
 /**
@@ -220,6 +234,7 @@ message CreateNodePredictionsRequest {
  */
 message CreatePodRecommendationsRequest {
     repeated PodRecommendation pod_recommendations = 1;
+    int64 granularity = 2;
 }
 
 /**
@@ -236,6 +251,10 @@ message CreateControllerRecommendationsRequest {
  */
 message CreatePodsRequest {
     repeated Pod pods = 1;
+}
+
+message CreateControllersRequest {
+    repeated Controller controllers = 1;
 }
 
 /**
@@ -262,12 +281,33 @@ message DeletePodsRequest {
     repeated Pod pods = 1;
 }
 
+message DeleteControllersRequest {
+    repeated Controller controllers = 1;
+}
+
 /**
  * Represents a request for stoping predicting nodes 
  * 
  */
 message DeleteAlamedaNodesRequest {
     repeated Node alameda_nodes = 1;
+}
+
+message ListWeaveScopeHostsRequest {
+    string host_id = 1;
+}
+
+message ListWeaveScopePodsRequest {
+    string pod_id = 1;
+}
+
+message ListWeaveScopeContainersRequest {
+    string container_id = 1;
+}
+
+message WeaveScopeResponse {
+    google.rpc.Status status = 1;
+    string rawdata = 2;
 }
 
 /**
@@ -294,6 +334,9 @@ service DatahubService {
     // Used to list nodes' information
     rpc ListNodes(ListNodesRequest)
         returns (ListNodesResponse){}
+
+    rpc ListControllers(ListControllersRequest)
+        returns (ListControllersResponse){}
 
     // Used to list pod predictions
     rpc ListPodPredictions(ListPodPredictionsRequest)
@@ -326,6 +369,9 @@ service DatahubService {
     // Used to add pods that need to be predicted
     rpc CreatePods(CreatePodsRequest)
         returns (google.rpc.Status){}
+
+    rpc CreateControllers(CreateControllersRequest)
+        returns (google.rpc.Status){}
     
     // Used to add nodes that need to be predicted
     rpc CreateAlamedaNodes(CreateAlamedaNodesRequest)
@@ -355,7 +401,35 @@ service DatahubService {
     rpc DeletePods(DeletePodsRequest)
         returns (google.rpc.Status){}
 
+    rpc DeleteControllers(DeleteControllersRequest)
+        returns (google.rpc.Status){}
+
     // Used to stop generating predictions for the nodes
     rpc DeleteAlamedaNodes(DeleteAlamedaNodesRequest)
-        returns (google.rpc.Status){}            
+        returns (google.rpc.Status){}
+
+    //weave scope--------------------------------------------------
+    rpc ListWeaveScopeHosts(ListWeaveScopeHostsRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc GetWeaveScopeHostDetails(ListWeaveScopeHostsRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc ListWeaveScopePods(ListWeaveScopePodsRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc GetWeaveScopePodDetails(ListWeaveScopePodsRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc ListWeaveScopeContainers(ListWeaveScopeContainersRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc ListWeaveScopeContainersByHostname(ListWeaveScopeContainersRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc ListWeaveScopeContainersByImage(ListWeaveScopeContainersRequest)
+        returns (WeaveScopeResponse){}
+
+    rpc GetWeaveScopeContainerDetails(ListWeaveScopeContainersRequest)
+        returns (WeaveScopeResponse){}
 }

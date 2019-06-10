@@ -44,7 +44,7 @@ func (x QueryCondition_Order) String() string {
 	return proto.EnumName(QueryCondition_Order_name, int32(x))
 }
 func (QueryCondition_Order) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{0, 0}
+	return fileDescriptor_server_5767d0b4733c5637, []int{0, 0}
 }
 
 type QueryCondition struct {
@@ -60,7 +60,7 @@ func (m *QueryCondition) Reset()         { *m = QueryCondition{} }
 func (m *QueryCondition) String() string { return proto.CompactTextString(m) }
 func (*QueryCondition) ProtoMessage()    {}
 func (*QueryCondition) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{0}
+	return fileDescriptor_server_5767d0b4733c5637, []int{0}
 }
 func (m *QueryCondition) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_QueryCondition.Unmarshal(m, b)
@@ -116,7 +116,7 @@ func (m *ListPodMetricsRequest) Reset()         { *m = ListPodMetricsRequest{} }
 func (m *ListPodMetricsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListPodMetricsRequest) ProtoMessage()    {}
 func (*ListPodMetricsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{1}
+	return fileDescriptor_server_5767d0b4733c5637, []int{1}
 }
 func (m *ListPodMetricsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodMetricsRequest.Unmarshal(m, b)
@@ -165,7 +165,7 @@ func (m *ListPodMetricsResponse) Reset()         { *m = ListPodMetricsResponse{}
 func (m *ListPodMetricsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListPodMetricsResponse) ProtoMessage()    {}
 func (*ListPodMetricsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{2}
+	return fileDescriptor_server_5767d0b4733c5637, []int{2}
 }
 func (m *ListPodMetricsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodMetricsResponse.Unmarshal(m, b)
@@ -214,7 +214,7 @@ func (m *ListNodeMetricsRequest) Reset()         { *m = ListNodeMetricsRequest{}
 func (m *ListNodeMetricsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListNodeMetricsRequest) ProtoMessage()    {}
 func (*ListNodeMetricsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{3}
+	return fileDescriptor_server_5767d0b4733c5637, []int{3}
 }
 func (m *ListNodeMetricsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListNodeMetricsRequest.Unmarshal(m, b)
@@ -263,7 +263,7 @@ func (m *ListNodeMetricsResponse) Reset()         { *m = ListNodeMetricsResponse
 func (m *ListNodeMetricsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListNodeMetricsResponse) ProtoMessage()    {}
 func (*ListNodeMetricsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{4}
+	return fileDescriptor_server_5767d0b4733c5637, []int{4}
 }
 func (m *ListNodeMetricsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListNodeMetricsResponse.Unmarshal(m, b)
@@ -312,7 +312,7 @@ func (m *ListPodsResponse) Reset()         { *m = ListPodsResponse{} }
 func (m *ListPodsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListPodsResponse) ProtoMessage()    {}
 func (*ListPodsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{5}
+	return fileDescriptor_server_5767d0b4733c5637, []int{5}
 }
 func (m *ListPodsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodsResponse.Unmarshal(m, b)
@@ -362,7 +362,7 @@ func (m *ListAlamedaPodsRequest) Reset()         { *m = ListAlamedaPodsRequest{}
 func (m *ListAlamedaPodsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListAlamedaPodsRequest) ProtoMessage()    {}
 func (*ListAlamedaPodsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{6}
+	return fileDescriptor_server_5767d0b4733c5637, []int{6}
 }
 func (m *ListAlamedaPodsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListAlamedaPodsRequest.Unmarshal(m, b)
@@ -417,7 +417,7 @@ func (m *ListAlamedaNodesRequest) Reset()         { *m = ListAlamedaNodesRequest
 func (m *ListAlamedaNodesRequest) String() string { return proto.CompactTextString(m) }
 func (*ListAlamedaNodesRequest) ProtoMessage()    {}
 func (*ListAlamedaNodesRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{7}
+	return fileDescriptor_server_5767d0b4733c5637, []int{7}
 }
 func (m *ListAlamedaNodesRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListAlamedaNodesRequest.Unmarshal(m, b)
@@ -458,7 +458,7 @@ func (m *ListNodesRequest) Reset()         { *m = ListNodesRequest{} }
 func (m *ListNodesRequest) String() string { return proto.CompactTextString(m) }
 func (*ListNodesRequest) ProtoMessage()    {}
 func (*ListNodesRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{8}
+	return fileDescriptor_server_5767d0b4733c5637, []int{8}
 }
 func (m *ListNodesRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListNodesRequest.Unmarshal(m, b)
@@ -500,7 +500,7 @@ func (m *ListNodesResponse) Reset()         { *m = ListNodesResponse{} }
 func (m *ListNodesResponse) String() string { return proto.CompactTextString(m) }
 func (*ListNodesResponse) ProtoMessage()    {}
 func (*ListNodesResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{9}
+	return fileDescriptor_server_5767d0b4733c5637, []int{9}
 }
 func (m *ListNodesResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListNodesResponse.Unmarshal(m, b)
@@ -534,12 +534,106 @@ func (m *ListNodesResponse) GetNodes() []*Node {
 	return nil
 }
 
+type ListControllersRequest struct {
+	NamespacedName       *NamespacedName `protobuf:"bytes,1,opt,name=namespaced_name,json=namespacedName,proto3" json:"namespaced_name,omitempty"`
+	QueryCondition       *QueryCondition `protobuf:"bytes,2,opt,name=query_condition,json=queryCondition,proto3" json:"query_condition,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *ListControllersRequest) Reset()         { *m = ListControllersRequest{} }
+func (m *ListControllersRequest) String() string { return proto.CompactTextString(m) }
+func (*ListControllersRequest) ProtoMessage()    {}
+func (*ListControllersRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{10}
+}
+func (m *ListControllersRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ListControllersRequest.Unmarshal(m, b)
+}
+func (m *ListControllersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ListControllersRequest.Marshal(b, m, deterministic)
+}
+func (dst *ListControllersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListControllersRequest.Merge(dst, src)
+}
+func (m *ListControllersRequest) XXX_Size() int {
+	return xxx_messageInfo_ListControllersRequest.Size(m)
+}
+func (m *ListControllersRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ListControllersRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ListControllersRequest proto.InternalMessageInfo
+
+func (m *ListControllersRequest) GetNamespacedName() *NamespacedName {
+	if m != nil {
+		return m.NamespacedName
+	}
+	return nil
+}
+
+func (m *ListControllersRequest) GetQueryCondition() *QueryCondition {
+	if m != nil {
+		return m.QueryCondition
+	}
+	return nil
+}
+
+type ListControllersResponse struct {
+	Status               *status.Status `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
+	Controllers          []*Controller  `protobuf:"bytes,2,rep,name=controllers,proto3" json:"controllers,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
+}
+
+func (m *ListControllersResponse) Reset()         { *m = ListControllersResponse{} }
+func (m *ListControllersResponse) String() string { return proto.CompactTextString(m) }
+func (*ListControllersResponse) ProtoMessage()    {}
+func (*ListControllersResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{11}
+}
+func (m *ListControllersResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ListControllersResponse.Unmarshal(m, b)
+}
+func (m *ListControllersResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ListControllersResponse.Marshal(b, m, deterministic)
+}
+func (dst *ListControllersResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListControllersResponse.Merge(dst, src)
+}
+func (m *ListControllersResponse) XXX_Size() int {
+	return xxx_messageInfo_ListControllersResponse.Size(m)
+}
+func (m *ListControllersResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_ListControllersResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ListControllersResponse proto.InternalMessageInfo
+
+func (m *ListControllersResponse) GetStatus() *status.Status {
+	if m != nil {
+		return m.Status
+	}
+	return nil
+}
+
+func (m *ListControllersResponse) GetControllers() []*Controller {
+	if m != nil {
+		return m.Controllers
+	}
+	return nil
+}
+
 // *
 // Represents a request for listing predictions of pods
 //
 type ListPodPredictionsRequest struct {
 	NamespacedName       *NamespacedName `protobuf:"bytes,1,opt,name=namespaced_name,json=namespacedName,proto3" json:"namespaced_name,omitempty"`
 	QueryCondition       *QueryCondition `protobuf:"bytes,2,opt,name=query_condition,json=queryCondition,proto3" json:"query_condition,omitempty"`
+	Granularity          int64           `protobuf:"varint,3,opt,name=granularity,proto3" json:"granularity,omitempty"`
+	FillDays             int64           `protobuf:"varint,4,opt,name=fill_days,json=fillDays,proto3" json:"fill_days,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
@@ -549,7 +643,7 @@ func (m *ListPodPredictionsRequest) Reset()         { *m = ListPodPredictionsReq
 func (m *ListPodPredictionsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListPodPredictionsRequest) ProtoMessage()    {}
 func (*ListPodPredictionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{10}
+	return fileDescriptor_server_5767d0b4733c5637, []int{12}
 }
 func (m *ListPodPredictionsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodPredictionsRequest.Unmarshal(m, b)
@@ -583,6 +677,20 @@ func (m *ListPodPredictionsRequest) GetQueryCondition() *QueryCondition {
 	return nil
 }
 
+func (m *ListPodPredictionsRequest) GetGranularity() int64 {
+	if m != nil {
+		return m.Granularity
+	}
+	return 0
+}
+
+func (m *ListPodPredictionsRequest) GetFillDays() int64 {
+	if m != nil {
+		return m.FillDays
+	}
+	return 0
+}
+
 // *
 // Represents a response for a listing predictions of pods request
 //
@@ -598,7 +706,7 @@ func (m *ListPodPredictionsResponse) Reset()         { *m = ListPodPredictionsRe
 func (m *ListPodPredictionsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListPodPredictionsResponse) ProtoMessage()    {}
 func (*ListPodPredictionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{11}
+	return fileDescriptor_server_5767d0b4733c5637, []int{13}
 }
 func (m *ListPodPredictionsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodPredictionsResponse.Unmarshal(m, b)
@@ -638,6 +746,7 @@ func (m *ListPodPredictionsResponse) GetPodPredictions() []*PodPrediction {
 type ListNodePredictionsRequest struct {
 	NodeNames            []string        `protobuf:"bytes,1,rep,name=node_names,json=nodeNames,proto3" json:"node_names,omitempty"`
 	QueryCondition       *QueryCondition `protobuf:"bytes,2,opt,name=query_condition,json=queryCondition,proto3" json:"query_condition,omitempty"`
+	Granularity          int64           `protobuf:"varint,3,opt,name=granularity,proto3" json:"granularity,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
@@ -647,7 +756,7 @@ func (m *ListNodePredictionsRequest) Reset()         { *m = ListNodePredictionsR
 func (m *ListNodePredictionsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListNodePredictionsRequest) ProtoMessage()    {}
 func (*ListNodePredictionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{12}
+	return fileDescriptor_server_5767d0b4733c5637, []int{14}
 }
 func (m *ListNodePredictionsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListNodePredictionsRequest.Unmarshal(m, b)
@@ -681,6 +790,13 @@ func (m *ListNodePredictionsRequest) GetQueryCondition() *QueryCondition {
 	return nil
 }
 
+func (m *ListNodePredictionsRequest) GetGranularity() int64 {
+	if m != nil {
+		return m.Granularity
+	}
+	return 0
+}
+
 // *
 // Represents a response for a listing predictions of nodes request
 //
@@ -696,7 +812,7 @@ func (m *ListNodePredictionsResponse) Reset()         { *m = ListNodePredictions
 func (m *ListNodePredictionsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListNodePredictionsResponse) ProtoMessage()    {}
 func (*ListNodePredictionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{13}
+	return fileDescriptor_server_5767d0b4733c5637, []int{15}
 }
 func (m *ListNodePredictionsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListNodePredictionsResponse.Unmarshal(m, b)
@@ -737,6 +853,7 @@ type ListPodRecommendationsRequest struct {
 	NamespacedName       *NamespacedName `protobuf:"bytes,1,opt,name=namespaced_name,json=namespacedName,proto3" json:"namespaced_name,omitempty"`
 	QueryCondition       *QueryCondition `protobuf:"bytes,2,opt,name=query_condition,json=queryCondition,proto3" json:"query_condition,omitempty"`
 	Kind                 Kind            `protobuf:"varint,3,opt,name=kind,proto3,enum=containers_ai.alameda.v1alpha1.datahub.Kind" json:"kind,omitempty"`
+	Granularity          int64           `protobuf:"varint,4,opt,name=granularity,proto3" json:"granularity,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
@@ -746,7 +863,7 @@ func (m *ListPodRecommendationsRequest) Reset()         { *m = ListPodRecommenda
 func (m *ListPodRecommendationsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListPodRecommendationsRequest) ProtoMessage()    {}
 func (*ListPodRecommendationsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{14}
+	return fileDescriptor_server_5767d0b4733c5637, []int{16}
 }
 func (m *ListPodRecommendationsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodRecommendationsRequest.Unmarshal(m, b)
@@ -787,6 +904,13 @@ func (m *ListPodRecommendationsRequest) GetKind() Kind {
 	return Kind_POD
 }
 
+func (m *ListPodRecommendationsRequest) GetGranularity() int64 {
+	if m != nil {
+		return m.Granularity
+	}
+	return 0
+}
+
 // *
 // Represents a response for listing pod recommendations request
 //
@@ -802,7 +926,7 @@ func (m *ListPodRecommendationsResponse) Reset()         { *m = ListPodRecommend
 func (m *ListPodRecommendationsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListPodRecommendationsResponse) ProtoMessage()    {}
 func (*ListPodRecommendationsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{15}
+	return fileDescriptor_server_5767d0b4733c5637, []int{17}
 }
 func (m *ListPodRecommendationsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodRecommendationsResponse.Unmarshal(m, b)
@@ -851,7 +975,7 @@ func (m *ListControllerRecommendationsRequest) Reset()         { *m = ListContro
 func (m *ListControllerRecommendationsRequest) String() string { return proto.CompactTextString(m) }
 func (*ListControllerRecommendationsRequest) ProtoMessage()    {}
 func (*ListControllerRecommendationsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{16}
+	return fileDescriptor_server_5767d0b4733c5637, []int{18}
 }
 func (m *ListControllerRecommendationsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListControllerRecommendationsRequest.Unmarshal(m, b)
@@ -900,7 +1024,7 @@ func (m *ListControllerRecommendationsResponse) Reset()         { *m = ListContr
 func (m *ListControllerRecommendationsResponse) String() string { return proto.CompactTextString(m) }
 func (*ListControllerRecommendationsResponse) ProtoMessage()    {}
 func (*ListControllerRecommendationsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{17}
+	return fileDescriptor_server_5767d0b4733c5637, []int{19}
 }
 func (m *ListControllerRecommendationsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListControllerRecommendationsResponse.Unmarshal(m, b)
@@ -948,7 +1072,7 @@ func (m *ListPodsByNodeNamesRequest) Reset()         { *m = ListPodsByNodeNamesR
 func (m *ListPodsByNodeNamesRequest) String() string { return proto.CompactTextString(m) }
 func (*ListPodsByNodeNamesRequest) ProtoMessage()    {}
 func (*ListPodsByNodeNamesRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{18}
+	return fileDescriptor_server_5767d0b4733c5637, []int{20}
 }
 func (m *ListPodsByNodeNamesRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListPodsByNodeNamesRequest.Unmarshal(m, b)
@@ -989,7 +1113,7 @@ func (m *ListSimulatedSchedulingScoresRequest) Reset()         { *m = ListSimula
 func (m *ListSimulatedSchedulingScoresRequest) String() string { return proto.CompactTextString(m) }
 func (*ListSimulatedSchedulingScoresRequest) ProtoMessage()    {}
 func (*ListSimulatedSchedulingScoresRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{19}
+	return fileDescriptor_server_5767d0b4733c5637, []int{21}
 }
 func (m *ListSimulatedSchedulingScoresRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListSimulatedSchedulingScoresRequest.Unmarshal(m, b)
@@ -1031,7 +1155,7 @@ func (m *ListSimulatedSchedulingScoresResponse) Reset()         { *m = ListSimul
 func (m *ListSimulatedSchedulingScoresResponse) String() string { return proto.CompactTextString(m) }
 func (*ListSimulatedSchedulingScoresResponse) ProtoMessage()    {}
 func (*ListSimulatedSchedulingScoresResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{20}
+	return fileDescriptor_server_5767d0b4733c5637, []int{22}
 }
 func (m *ListSimulatedSchedulingScoresResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListSimulatedSchedulingScoresResponse.Unmarshal(m, b)
@@ -1078,7 +1202,7 @@ func (m *CreatePodPredictionsRequest) Reset()         { *m = CreatePodPrediction
 func (m *CreatePodPredictionsRequest) String() string { return proto.CompactTextString(m) }
 func (*CreatePodPredictionsRequest) ProtoMessage()    {}
 func (*CreatePodPredictionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{21}
+	return fileDescriptor_server_5767d0b4733c5637, []int{23}
 }
 func (m *CreatePodPredictionsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreatePodPredictionsRequest.Unmarshal(m, b)
@@ -1119,7 +1243,7 @@ func (m *CreateNodePredictionsRequest) Reset()         { *m = CreateNodePredicti
 func (m *CreateNodePredictionsRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateNodePredictionsRequest) ProtoMessage()    {}
 func (*CreateNodePredictionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{22}
+	return fileDescriptor_server_5767d0b4733c5637, []int{24}
 }
 func (m *CreateNodePredictionsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateNodePredictionsRequest.Unmarshal(m, b)
@@ -1151,6 +1275,7 @@ func (m *CreateNodePredictionsRequest) GetNodePredictions() []*NodePrediction {
 //
 type CreatePodRecommendationsRequest struct {
 	PodRecommendations   []*PodRecommendation `protobuf:"bytes,1,rep,name=pod_recommendations,json=podRecommendations,proto3" json:"pod_recommendations,omitempty"`
+	Granularity          int64                `protobuf:"varint,2,opt,name=granularity,proto3" json:"granularity,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
 	XXX_unrecognized     []byte               `json:"-"`
 	XXX_sizecache        int32                `json:"-"`
@@ -1160,7 +1285,7 @@ func (m *CreatePodRecommendationsRequest) Reset()         { *m = CreatePodRecomm
 func (m *CreatePodRecommendationsRequest) String() string { return proto.CompactTextString(m) }
 func (*CreatePodRecommendationsRequest) ProtoMessage()    {}
 func (*CreatePodRecommendationsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{23}
+	return fileDescriptor_server_5767d0b4733c5637, []int{25}
 }
 func (m *CreatePodRecommendationsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreatePodRecommendationsRequest.Unmarshal(m, b)
@@ -1187,6 +1312,13 @@ func (m *CreatePodRecommendationsRequest) GetPodRecommendations() []*PodRecommen
 	return nil
 }
 
+func (m *CreatePodRecommendationsRequest) GetGranularity() int64 {
+	if m != nil {
+		return m.Granularity
+	}
+	return 0
+}
+
 // *
 // Represents a request for creating a controller's recommendation
 //
@@ -1203,7 +1335,7 @@ func (m *CreateControllerRecommendationsRequest) Reset() {
 func (m *CreateControllerRecommendationsRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateControllerRecommendationsRequest) ProtoMessage()    {}
 func (*CreateControllerRecommendationsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{24}
+	return fileDescriptor_server_5767d0b4733c5637, []int{26}
 }
 func (m *CreateControllerRecommendationsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateControllerRecommendationsRequest.Unmarshal(m, b)
@@ -1244,7 +1376,7 @@ func (m *CreatePodsRequest) Reset()         { *m = CreatePodsRequest{} }
 func (m *CreatePodsRequest) String() string { return proto.CompactTextString(m) }
 func (*CreatePodsRequest) ProtoMessage()    {}
 func (*CreatePodsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{25}
+	return fileDescriptor_server_5767d0b4733c5637, []int{27}
 }
 func (m *CreatePodsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreatePodsRequest.Unmarshal(m, b)
@@ -1271,6 +1403,44 @@ func (m *CreatePodsRequest) GetPods() []*Pod {
 	return nil
 }
 
+type CreateControllersRequest struct {
+	Controllers          []*Controller `protobuf:"bytes,1,rep,name=controllers,proto3" json:"controllers,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
+}
+
+func (m *CreateControllersRequest) Reset()         { *m = CreateControllersRequest{} }
+func (m *CreateControllersRequest) String() string { return proto.CompactTextString(m) }
+func (*CreateControllersRequest) ProtoMessage()    {}
+func (*CreateControllersRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{28}
+}
+func (m *CreateControllersRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CreateControllersRequest.Unmarshal(m, b)
+}
+func (m *CreateControllersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CreateControllersRequest.Marshal(b, m, deterministic)
+}
+func (dst *CreateControllersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CreateControllersRequest.Merge(dst, src)
+}
+func (m *CreateControllersRequest) XXX_Size() int {
+	return xxx_messageInfo_CreateControllersRequest.Size(m)
+}
+func (m *CreateControllersRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_CreateControllersRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_CreateControllersRequest proto.InternalMessageInfo
+
+func (m *CreateControllersRequest) GetControllers() []*Controller {
+	if m != nil {
+		return m.Controllers
+	}
+	return nil
+}
+
 // *
 // Represents a request for adding nodes that need to be predicted
 //
@@ -1285,7 +1455,7 @@ func (m *CreateAlamedaNodesRequest) Reset()         { *m = CreateAlamedaNodesReq
 func (m *CreateAlamedaNodesRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateAlamedaNodesRequest) ProtoMessage()    {}
 func (*CreateAlamedaNodesRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{26}
+	return fileDescriptor_server_5767d0b4733c5637, []int{29}
 }
 func (m *CreateAlamedaNodesRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateAlamedaNodesRequest.Unmarshal(m, b)
@@ -1328,7 +1498,7 @@ func (m *CreateSimulatedSchedulingScoresRequest) Reset() {
 func (m *CreateSimulatedSchedulingScoresRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateSimulatedSchedulingScoresRequest) ProtoMessage()    {}
 func (*CreateSimulatedSchedulingScoresRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{27}
+	return fileDescriptor_server_5767d0b4733c5637, []int{30}
 }
 func (m *CreateSimulatedSchedulingScoresRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateSimulatedSchedulingScoresRequest.Unmarshal(m, b)
@@ -1369,7 +1539,7 @@ func (m *DeletePodsRequest) Reset()         { *m = DeletePodsRequest{} }
 func (m *DeletePodsRequest) String() string { return proto.CompactTextString(m) }
 func (*DeletePodsRequest) ProtoMessage()    {}
 func (*DeletePodsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{28}
+	return fileDescriptor_server_5767d0b4733c5637, []int{31}
 }
 func (m *DeletePodsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeletePodsRequest.Unmarshal(m, b)
@@ -1396,6 +1566,44 @@ func (m *DeletePodsRequest) GetPods() []*Pod {
 	return nil
 }
 
+type DeleteControllersRequest struct {
+	Controllers          []*Controller `protobuf:"bytes,1,rep,name=controllers,proto3" json:"controllers,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
+}
+
+func (m *DeleteControllersRequest) Reset()         { *m = DeleteControllersRequest{} }
+func (m *DeleteControllersRequest) String() string { return proto.CompactTextString(m) }
+func (*DeleteControllersRequest) ProtoMessage()    {}
+func (*DeleteControllersRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{32}
+}
+func (m *DeleteControllersRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DeleteControllersRequest.Unmarshal(m, b)
+}
+func (m *DeleteControllersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DeleteControllersRequest.Marshal(b, m, deterministic)
+}
+func (dst *DeleteControllersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeleteControllersRequest.Merge(dst, src)
+}
+func (m *DeleteControllersRequest) XXX_Size() int {
+	return xxx_messageInfo_DeleteControllersRequest.Size(m)
+}
+func (m *DeleteControllersRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_DeleteControllersRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DeleteControllersRequest proto.InternalMessageInfo
+
+func (m *DeleteControllersRequest) GetControllers() []*Controller {
+	if m != nil {
+		return m.Controllers
+	}
+	return nil
+}
+
 // *
 // Represents a request for stoping predicting nodes
 //
@@ -1410,7 +1618,7 @@ func (m *DeleteAlamedaNodesRequest) Reset()         { *m = DeleteAlamedaNodesReq
 func (m *DeleteAlamedaNodesRequest) String() string { return proto.CompactTextString(m) }
 func (*DeleteAlamedaNodesRequest) ProtoMessage()    {}
 func (*DeleteAlamedaNodesRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_server_f214d96a32410499, []int{29}
+	return fileDescriptor_server_5767d0b4733c5637, []int{33}
 }
 func (m *DeleteAlamedaNodesRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteAlamedaNodesRequest.Unmarshal(m, b)
@@ -1437,6 +1645,166 @@ func (m *DeleteAlamedaNodesRequest) GetAlamedaNodes() []*Node {
 	return nil
 }
 
+type ListWeaveScopeHostsRequest struct {
+	HostId               string   `protobuf:"bytes,1,opt,name=host_id,json=hostId,proto3" json:"host_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ListWeaveScopeHostsRequest) Reset()         { *m = ListWeaveScopeHostsRequest{} }
+func (m *ListWeaveScopeHostsRequest) String() string { return proto.CompactTextString(m) }
+func (*ListWeaveScopeHostsRequest) ProtoMessage()    {}
+func (*ListWeaveScopeHostsRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{34}
+}
+func (m *ListWeaveScopeHostsRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ListWeaveScopeHostsRequest.Unmarshal(m, b)
+}
+func (m *ListWeaveScopeHostsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ListWeaveScopeHostsRequest.Marshal(b, m, deterministic)
+}
+func (dst *ListWeaveScopeHostsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListWeaveScopeHostsRequest.Merge(dst, src)
+}
+func (m *ListWeaveScopeHostsRequest) XXX_Size() int {
+	return xxx_messageInfo_ListWeaveScopeHostsRequest.Size(m)
+}
+func (m *ListWeaveScopeHostsRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ListWeaveScopeHostsRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ListWeaveScopeHostsRequest proto.InternalMessageInfo
+
+func (m *ListWeaveScopeHostsRequest) GetHostId() string {
+	if m != nil {
+		return m.HostId
+	}
+	return ""
+}
+
+type ListWeaveScopePodsRequest struct {
+	PodId                string   `protobuf:"bytes,1,opt,name=pod_id,json=podId,proto3" json:"pod_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ListWeaveScopePodsRequest) Reset()         { *m = ListWeaveScopePodsRequest{} }
+func (m *ListWeaveScopePodsRequest) String() string { return proto.CompactTextString(m) }
+func (*ListWeaveScopePodsRequest) ProtoMessage()    {}
+func (*ListWeaveScopePodsRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{35}
+}
+func (m *ListWeaveScopePodsRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ListWeaveScopePodsRequest.Unmarshal(m, b)
+}
+func (m *ListWeaveScopePodsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ListWeaveScopePodsRequest.Marshal(b, m, deterministic)
+}
+func (dst *ListWeaveScopePodsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListWeaveScopePodsRequest.Merge(dst, src)
+}
+func (m *ListWeaveScopePodsRequest) XXX_Size() int {
+	return xxx_messageInfo_ListWeaveScopePodsRequest.Size(m)
+}
+func (m *ListWeaveScopePodsRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ListWeaveScopePodsRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ListWeaveScopePodsRequest proto.InternalMessageInfo
+
+func (m *ListWeaveScopePodsRequest) GetPodId() string {
+	if m != nil {
+		return m.PodId
+	}
+	return ""
+}
+
+type ListWeaveScopeContainersRequest struct {
+	ContainerId          string   `protobuf:"bytes,1,opt,name=container_id,json=containerId,proto3" json:"container_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ListWeaveScopeContainersRequest) Reset()         { *m = ListWeaveScopeContainersRequest{} }
+func (m *ListWeaveScopeContainersRequest) String() string { return proto.CompactTextString(m) }
+func (*ListWeaveScopeContainersRequest) ProtoMessage()    {}
+func (*ListWeaveScopeContainersRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{36}
+}
+func (m *ListWeaveScopeContainersRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ListWeaveScopeContainersRequest.Unmarshal(m, b)
+}
+func (m *ListWeaveScopeContainersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ListWeaveScopeContainersRequest.Marshal(b, m, deterministic)
+}
+func (dst *ListWeaveScopeContainersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListWeaveScopeContainersRequest.Merge(dst, src)
+}
+func (m *ListWeaveScopeContainersRequest) XXX_Size() int {
+	return xxx_messageInfo_ListWeaveScopeContainersRequest.Size(m)
+}
+func (m *ListWeaveScopeContainersRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ListWeaveScopeContainersRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ListWeaveScopeContainersRequest proto.InternalMessageInfo
+
+func (m *ListWeaveScopeContainersRequest) GetContainerId() string {
+	if m != nil {
+		return m.ContainerId
+	}
+	return ""
+}
+
+type WeaveScopeResponse struct {
+	Status               *status.Status `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
+	Rawdata              string         `protobuf:"bytes,2,opt,name=rawdata,proto3" json:"rawdata,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
+}
+
+func (m *WeaveScopeResponse) Reset()         { *m = WeaveScopeResponse{} }
+func (m *WeaveScopeResponse) String() string { return proto.CompactTextString(m) }
+func (*WeaveScopeResponse) ProtoMessage()    {}
+func (*WeaveScopeResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_server_5767d0b4733c5637, []int{37}
+}
+func (m *WeaveScopeResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_WeaveScopeResponse.Unmarshal(m, b)
+}
+func (m *WeaveScopeResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_WeaveScopeResponse.Marshal(b, m, deterministic)
+}
+func (dst *WeaveScopeResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_WeaveScopeResponse.Merge(dst, src)
+}
+func (m *WeaveScopeResponse) XXX_Size() int {
+	return xxx_messageInfo_WeaveScopeResponse.Size(m)
+}
+func (m *WeaveScopeResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_WeaveScopeResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_WeaveScopeResponse proto.InternalMessageInfo
+
+func (m *WeaveScopeResponse) GetStatus() *status.Status {
+	if m != nil {
+		return m.Status
+	}
+	return nil
+}
+
+func (m *WeaveScopeResponse) GetRawdata() string {
+	if m != nil {
+		return m.Rawdata
+	}
+	return ""
+}
+
 func init() {
 	proto.RegisterType((*QueryCondition)(nil), "containers_ai.alameda.v1alpha1.datahub.QueryCondition")
 	proto.RegisterType((*ListPodMetricsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListPodMetricsRequest")
@@ -1448,6 +1816,8 @@ func init() {
 	proto.RegisterType((*ListAlamedaNodesRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListAlamedaNodesRequest")
 	proto.RegisterType((*ListNodesRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListNodesRequest")
 	proto.RegisterType((*ListNodesResponse)(nil), "containers_ai.alameda.v1alpha1.datahub.ListNodesResponse")
+	proto.RegisterType((*ListControllersRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListControllersRequest")
+	proto.RegisterType((*ListControllersResponse)(nil), "containers_ai.alameda.v1alpha1.datahub.ListControllersResponse")
 	proto.RegisterType((*ListPodPredictionsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListPodPredictionsRequest")
 	proto.RegisterType((*ListPodPredictionsResponse)(nil), "containers_ai.alameda.v1alpha1.datahub.ListPodPredictionsResponse")
 	proto.RegisterType((*ListNodePredictionsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListNodePredictionsRequest")
@@ -1464,10 +1834,16 @@ func init() {
 	proto.RegisterType((*CreatePodRecommendationsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.CreatePodRecommendationsRequest")
 	proto.RegisterType((*CreateControllerRecommendationsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.CreateControllerRecommendationsRequest")
 	proto.RegisterType((*CreatePodsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.CreatePodsRequest")
+	proto.RegisterType((*CreateControllersRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.CreateControllersRequest")
 	proto.RegisterType((*CreateAlamedaNodesRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.CreateAlamedaNodesRequest")
 	proto.RegisterType((*CreateSimulatedSchedulingScoresRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.CreateSimulatedSchedulingScoresRequest")
 	proto.RegisterType((*DeletePodsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.DeletePodsRequest")
+	proto.RegisterType((*DeleteControllersRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.DeleteControllersRequest")
 	proto.RegisterType((*DeleteAlamedaNodesRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.DeleteAlamedaNodesRequest")
+	proto.RegisterType((*ListWeaveScopeHostsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListWeaveScopeHostsRequest")
+	proto.RegisterType((*ListWeaveScopePodsRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListWeaveScopePodsRequest")
+	proto.RegisterType((*ListWeaveScopeContainersRequest)(nil), "containers_ai.alameda.v1alpha1.datahub.ListWeaveScopeContainersRequest")
+	proto.RegisterType((*WeaveScopeResponse)(nil), "containers_ai.alameda.v1alpha1.datahub.WeaveScopeResponse")
 	proto.RegisterEnum("containers_ai.alameda.v1alpha1.datahub.QueryCondition_Order", QueryCondition_Order_name, QueryCondition_Order_value)
 }
 
@@ -1493,6 +1869,7 @@ type DatahubServiceClient interface {
 	ListAlamedaNodes(ctx context.Context, in *ListAlamedaNodesRequest, opts ...grpc.CallOption) (*ListNodesResponse, error)
 	// Used to list nodes' information
 	ListNodes(ctx context.Context, in *ListNodesRequest, opts ...grpc.CallOption) (*ListNodesResponse, error)
+	ListControllers(ctx context.Context, in *ListControllersRequest, opts ...grpc.CallOption) (*ListControllersResponse, error)
 	// Used to list pod predictions
 	ListPodPredictions(ctx context.Context, in *ListPodPredictionsRequest, opts ...grpc.CallOption) (*ListPodPredictionsResponse, error)
 	// Used to list node predictions
@@ -1509,6 +1886,7 @@ type DatahubServiceClient interface {
 	ListSimulatedSchedulingScores(ctx context.Context, in *ListSimulatedSchedulingScoresRequest, opts ...grpc.CallOption) (*ListSimulatedSchedulingScoresResponse, error)
 	// Used to add pods that need to be predicted
 	CreatePods(ctx context.Context, in *CreatePodsRequest, opts ...grpc.CallOption) (*status.Status, error)
+	CreateControllers(ctx context.Context, in *CreateControllersRequest, opts ...grpc.CallOption) (*status.Status, error)
 	// Used to add nodes that need to be predicted
 	CreateAlamedaNodes(ctx context.Context, in *CreateAlamedaNodesRequest, opts ...grpc.CallOption) (*status.Status, error)
 	// Used to create predictions of pods
@@ -1523,8 +1901,18 @@ type DatahubServiceClient interface {
 	CreateSimulatedSchedulingScores(ctx context.Context, in *CreateSimulatedSchedulingScoresRequest, opts ...grpc.CallOption) (*status.Status, error)
 	// Used to delete info of pods
 	DeletePods(ctx context.Context, in *DeletePodsRequest, opts ...grpc.CallOption) (*status.Status, error)
+	DeleteControllers(ctx context.Context, in *DeleteControllersRequest, opts ...grpc.CallOption) (*status.Status, error)
 	// Used to stop generating predictions for the nodes
 	DeleteAlamedaNodes(ctx context.Context, in *DeleteAlamedaNodesRequest, opts ...grpc.CallOption) (*status.Status, error)
+	// weave scope--------------------------------------------------
+	ListWeaveScopeHosts(ctx context.Context, in *ListWeaveScopeHostsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	GetWeaveScopeHostDetails(ctx context.Context, in *ListWeaveScopeHostsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	ListWeaveScopePods(ctx context.Context, in *ListWeaveScopePodsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	GetWeaveScopePodDetails(ctx context.Context, in *ListWeaveScopePodsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	ListWeaveScopeContainers(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	ListWeaveScopeContainersByHostname(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	ListWeaveScopeContainersByImage(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
+	GetWeaveScopeContainerDetails(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error)
 }
 
 type datahubServiceClient struct {
@@ -1574,6 +1962,15 @@ func (c *datahubServiceClient) ListAlamedaNodes(ctx context.Context, in *ListAla
 func (c *datahubServiceClient) ListNodes(ctx context.Context, in *ListNodesRequest, opts ...grpc.CallOption) (*ListNodesResponse, error) {
 	out := new(ListNodesResponse)
 	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListNodes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) ListControllers(ctx context.Context, in *ListControllersRequest, opts ...grpc.CallOption) (*ListControllersResponse, error) {
+	out := new(ListControllersResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListControllers", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1652,6 +2049,15 @@ func (c *datahubServiceClient) CreatePods(ctx context.Context, in *CreatePodsReq
 	return out, nil
 }
 
+func (c *datahubServiceClient) CreateControllers(ctx context.Context, in *CreateControllersRequest, opts ...grpc.CallOption) (*status.Status, error) {
+	out := new(status.Status)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/CreateControllers", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *datahubServiceClient) CreateAlamedaNodes(ctx context.Context, in *CreateAlamedaNodesRequest, opts ...grpc.CallOption) (*status.Status, error) {
 	out := new(status.Status)
 	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/CreateAlamedaNodes", in, out, opts...)
@@ -1715,9 +2121,90 @@ func (c *datahubServiceClient) DeletePods(ctx context.Context, in *DeletePodsReq
 	return out, nil
 }
 
+func (c *datahubServiceClient) DeleteControllers(ctx context.Context, in *DeleteControllersRequest, opts ...grpc.CallOption) (*status.Status, error) {
+	out := new(status.Status)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/DeleteControllers", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *datahubServiceClient) DeleteAlamedaNodes(ctx context.Context, in *DeleteAlamedaNodesRequest, opts ...grpc.CallOption) (*status.Status, error) {
 	out := new(status.Status)
 	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/DeleteAlamedaNodes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) ListWeaveScopeHosts(ctx context.Context, in *ListWeaveScopeHostsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeHosts", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) GetWeaveScopeHostDetails(ctx context.Context, in *ListWeaveScopeHostsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopeHostDetails", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) ListWeaveScopePods(ctx context.Context, in *ListWeaveScopePodsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopePods", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) GetWeaveScopePodDetails(ctx context.Context, in *ListWeaveScopePodsRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopePodDetails", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) ListWeaveScopeContainers(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainers", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) ListWeaveScopeContainersByHostname(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainersByHostname", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) ListWeaveScopeContainersByImage(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainersByImage", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *datahubServiceClient) GetWeaveScopeContainerDetails(ctx context.Context, in *ListWeaveScopeContainersRequest, opts ...grpc.CallOption) (*WeaveScopeResponse, error) {
+	out := new(WeaveScopeResponse)
+	err := c.cc.Invoke(ctx, "/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopeContainerDetails", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1736,6 +2223,7 @@ type DatahubServiceServer interface {
 	ListAlamedaNodes(context.Context, *ListAlamedaNodesRequest) (*ListNodesResponse, error)
 	// Used to list nodes' information
 	ListNodes(context.Context, *ListNodesRequest) (*ListNodesResponse, error)
+	ListControllers(context.Context, *ListControllersRequest) (*ListControllersResponse, error)
 	// Used to list pod predictions
 	ListPodPredictions(context.Context, *ListPodPredictionsRequest) (*ListPodPredictionsResponse, error)
 	// Used to list node predictions
@@ -1752,6 +2240,7 @@ type DatahubServiceServer interface {
 	ListSimulatedSchedulingScores(context.Context, *ListSimulatedSchedulingScoresRequest) (*ListSimulatedSchedulingScoresResponse, error)
 	// Used to add pods that need to be predicted
 	CreatePods(context.Context, *CreatePodsRequest) (*status.Status, error)
+	CreateControllers(context.Context, *CreateControllersRequest) (*status.Status, error)
 	// Used to add nodes that need to be predicted
 	CreateAlamedaNodes(context.Context, *CreateAlamedaNodesRequest) (*status.Status, error)
 	// Used to create predictions of pods
@@ -1766,8 +2255,18 @@ type DatahubServiceServer interface {
 	CreateSimulatedSchedulingScores(context.Context, *CreateSimulatedSchedulingScoresRequest) (*status.Status, error)
 	// Used to delete info of pods
 	DeletePods(context.Context, *DeletePodsRequest) (*status.Status, error)
+	DeleteControllers(context.Context, *DeleteControllersRequest) (*status.Status, error)
 	// Used to stop generating predictions for the nodes
 	DeleteAlamedaNodes(context.Context, *DeleteAlamedaNodesRequest) (*status.Status, error)
+	// weave scope--------------------------------------------------
+	ListWeaveScopeHosts(context.Context, *ListWeaveScopeHostsRequest) (*WeaveScopeResponse, error)
+	GetWeaveScopeHostDetails(context.Context, *ListWeaveScopeHostsRequest) (*WeaveScopeResponse, error)
+	ListWeaveScopePods(context.Context, *ListWeaveScopePodsRequest) (*WeaveScopeResponse, error)
+	GetWeaveScopePodDetails(context.Context, *ListWeaveScopePodsRequest) (*WeaveScopeResponse, error)
+	ListWeaveScopeContainers(context.Context, *ListWeaveScopeContainersRequest) (*WeaveScopeResponse, error)
+	ListWeaveScopeContainersByHostname(context.Context, *ListWeaveScopeContainersRequest) (*WeaveScopeResponse, error)
+	ListWeaveScopeContainersByImage(context.Context, *ListWeaveScopeContainersRequest) (*WeaveScopeResponse, error)
+	GetWeaveScopeContainerDetails(context.Context, *ListWeaveScopeContainersRequest) (*WeaveScopeResponse, error)
 }
 
 func RegisterDatahubServiceServer(s *grpc.Server, srv DatahubServiceServer) {
@@ -1860,6 +2359,24 @@ func _DatahubService_ListNodes_Handler(srv interface{}, ctx context.Context, dec
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DatahubServiceServer).ListNodes(ctx, req.(*ListNodesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_ListControllers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListControllersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).ListControllers(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListControllers",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).ListControllers(ctx, req.(*ListControllersRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2008,6 +2525,24 @@ func _DatahubService_CreatePods_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatahubService_CreateControllers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateControllersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).CreateControllers(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/CreateControllers",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).CreateControllers(ctx, req.(*CreateControllersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DatahubService_CreateAlamedaNodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateAlamedaNodesRequest)
 	if err := dec(in); err != nil {
@@ -2134,6 +2669,24 @@ func _DatahubService_DeletePods_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatahubService_DeleteControllers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteControllersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).DeleteControllers(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/DeleteControllers",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).DeleteControllers(ctx, req.(*DeleteControllersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DatahubService_DeleteAlamedaNodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteAlamedaNodesRequest)
 	if err := dec(in); err != nil {
@@ -2148,6 +2701,150 @@ func _DatahubService_DeleteAlamedaNodes_Handler(srv interface{}, ctx context.Con
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DatahubServiceServer).DeleteAlamedaNodes(ctx, req.(*DeleteAlamedaNodesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_ListWeaveScopeHosts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopeHostsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).ListWeaveScopeHosts(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeHosts",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).ListWeaveScopeHosts(ctx, req.(*ListWeaveScopeHostsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_GetWeaveScopeHostDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopeHostsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).GetWeaveScopeHostDetails(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopeHostDetails",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).GetWeaveScopeHostDetails(ctx, req.(*ListWeaveScopeHostsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_ListWeaveScopePods_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopePodsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).ListWeaveScopePods(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopePods",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).ListWeaveScopePods(ctx, req.(*ListWeaveScopePodsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_GetWeaveScopePodDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopePodsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).GetWeaveScopePodDetails(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopePodDetails",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).GetWeaveScopePodDetails(ctx, req.(*ListWeaveScopePodsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_ListWeaveScopeContainers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopeContainersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).ListWeaveScopeContainers(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainers",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).ListWeaveScopeContainers(ctx, req.(*ListWeaveScopeContainersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_ListWeaveScopeContainersByHostname_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopeContainersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).ListWeaveScopeContainersByHostname(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainersByHostname",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).ListWeaveScopeContainersByHostname(ctx, req.(*ListWeaveScopeContainersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_ListWeaveScopeContainersByImage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopeContainersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).ListWeaveScopeContainersByImage(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeContainersByImage",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).ListWeaveScopeContainersByImage(ctx, req.(*ListWeaveScopeContainersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DatahubService_GetWeaveScopeContainerDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListWeaveScopeContainersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatahubServiceServer).GetWeaveScopeContainerDetails(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/containers_ai.alameda.v1alpha1.datahub.DatahubService/GetWeaveScopeContainerDetails",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatahubServiceServer).GetWeaveScopeContainerDetails(ctx, req.(*ListWeaveScopeContainersRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2175,6 +2872,10 @@ var _DatahubService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ListNodes",
 			Handler:    _DatahubService_ListNodes_Handler,
+		},
+		{
+			MethodName: "ListControllers",
+			Handler:    _DatahubService_ListControllers_Handler,
 		},
 		{
 			MethodName: "ListPodPredictions",
@@ -2209,6 +2910,10 @@ var _DatahubService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _DatahubService_CreatePods_Handler,
 		},
 		{
+			MethodName: "CreateControllers",
+			Handler:    _DatahubService_CreateControllers_Handler,
+		},
+		{
 			MethodName: "CreateAlamedaNodes",
 			Handler:    _DatahubService_CreateAlamedaNodes_Handler,
 		},
@@ -2237,8 +2942,44 @@ var _DatahubService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _DatahubService_DeletePods_Handler,
 		},
 		{
+			MethodName: "DeleteControllers",
+			Handler:    _DatahubService_DeleteControllers_Handler,
+		},
+		{
 			MethodName: "DeleteAlamedaNodes",
 			Handler:    _DatahubService_DeleteAlamedaNodes_Handler,
+		},
+		{
+			MethodName: "ListWeaveScopeHosts",
+			Handler:    _DatahubService_ListWeaveScopeHosts_Handler,
+		},
+		{
+			MethodName: "GetWeaveScopeHostDetails",
+			Handler:    _DatahubService_GetWeaveScopeHostDetails_Handler,
+		},
+		{
+			MethodName: "ListWeaveScopePods",
+			Handler:    _DatahubService_ListWeaveScopePods_Handler,
+		},
+		{
+			MethodName: "GetWeaveScopePodDetails",
+			Handler:    _DatahubService_GetWeaveScopePodDetails_Handler,
+		},
+		{
+			MethodName: "ListWeaveScopeContainers",
+			Handler:    _DatahubService_ListWeaveScopeContainers_Handler,
+		},
+		{
+			MethodName: "ListWeaveScopeContainersByHostname",
+			Handler:    _DatahubService_ListWeaveScopeContainersByHostname_Handler,
+		},
+		{
+			MethodName: "ListWeaveScopeContainersByImage",
+			Handler:    _DatahubService_ListWeaveScopeContainersByImage_Handler,
+		},
+		{
+			MethodName: "GetWeaveScopeContainerDetails",
+			Handler:    _DatahubService_GetWeaveScopeContainerDetails_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -2246,92 +2987,115 @@ var _DatahubService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("alameda_api/v1alpha1/datahub/server.proto", fileDescriptor_server_f214d96a32410499)
+	proto.RegisterFile("alameda_api/v1alpha1/datahub/server.proto", fileDescriptor_server_5767d0b4733c5637)
 }
 
-var fileDescriptor_server_f214d96a32410499 = []byte{
-	// 1326 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xdc, 0x59, 0xcf, 0x6f, 0xdc, 0xc4,
-	0x17, 0xcf, 0x64, 0x93, 0x7c, 0xbf, 0x79, 0x29, 0x9b, 0x64, 0xda, 0x92, 0xc4, 0xa5, 0x34, 0xb2,
-	0xa0, 0x4a, 0x7f, 0x68, 0xa3, 0x04, 0x51, 0xb5, 0xe2, 0x47, 0x9a, 0x6c, 0x0a, 0x07, 0xda, 0x90,
-	0xce, 0x06, 0x89, 0x4b, 0x59, 0x4d, 0xec, 0x51, 0x62, 0xba, 0x6b, 0x3b, 0xb6, 0x37, 0x52, 0x0e,
-	0xa8, 0xa2, 0x1c, 0x7a, 0x8a, 0x04, 0x12, 0x07, 0x0e, 0x20, 0x21, 0x71, 0xa1, 0x12, 0x5c, 0xe0,
-	0xc2, 0x89, 0xbf, 0x82, 0x0b, 0x07, 0xee, 0xfc, 0x19, 0xc8, 0x1e, 0xdb, 0xbb, 0x5e, 0x8f, 0xd7,
-	0x1e, 0x67, 0x53, 0x44, 0x6e, 0x76, 0x76, 0xe6, 0xbd, 0xcf, 0x7c, 0xde, 0x7b, 0x9f, 0x79, 0xcf,
-	0x81, 0x6b, 0xb4, 0x45, 0xdb, 0x4c, 0xa7, 0x4d, 0x6a, 0x1b, 0xcb, 0x87, 0x2b, 0xb4, 0x65, 0xef,
-	0xd3, 0x95, 0x65, 0x9d, 0x7a, 0x74, 0xbf, 0xb3, 0xbb, 0xec, 0x32, 0xe7, 0x90, 0x39, 0x35, 0xdb,
-	0xb1, 0x3c, 0x0b, 0x5f, 0xd5, 0x2c, 0xd3, 0xa3, 0x86, 0xc9, 0x1c, 0xb7, 0x49, 0x8d, 0x5a, 0xb8,
-	0xb1, 0x16, 0x6d, 0xaa, 0x85, 0x9b, 0x94, 0xb9, 0x3d, 0xcb, 0xda, 0x6b, 0xb1, 0x65, 0xc7, 0xd6,
-	0x96, 0x5d, 0x8f, 0x7a, 0x1d, 0x97, 0x1b, 0x50, 0x6e, 0x0c, 0xf4, 0xd5, 0x66, 0x1e, 0xf5, 0x9f,
-	0xc3, 0xc5, 0xd7, 0x07, 0x2e, 0xb6, 0x1d, 0xa6, 0x1b, 0x9a, 0x17, 0xae, 0xbd, 0x96, 0x67, 0xd8,
-	0x31, 0xb4, 0x42, 0x18, 0x1c, 0xe6, 0x5a, 0x1d, 0x47, 0x63, 0xe1, 0xe2, 0x95, 0x9c, 0xc5, 0x9a,
-	0xd5, 0x6e, 0x33, 0x53, 0xa7, 0x9e, 0x61, 0x99, 0xe1, 0x96, 0xa5, 0xc1, 0x7c, 0x6a, 0x96, 0x13,
-	0x1a, 0x57, 0xff, 0x46, 0x50, 0x7d, 0xd8, 0x61, 0xce, 0x51, 0xdd, 0x32, 0x75, 0xc3, 0x37, 0x81,
-	0xb7, 0x01, 0x3c, 0xa3, 0xcd, 0x9a, 0x0e, 0x35, 0xf7, 0xd8, 0x3c, 0x5a, 0x44, 0x4b, 0x53, 0xab,
-	0x2b, 0xb5, 0x62, 0xb4, 0xd7, 0x76, 0x8c, 0x36, 0x23, 0xfe, 0x46, 0x32, 0xe9, 0x45, 0x8f, 0x98,
-	0xc0, 0xb8, 0xe5, 0xe8, 0xcc, 0x99, 0x1f, 0x5d, 0x44, 0x4b, 0xd5, 0xd5, 0xb7, 0x8b, 0x1a, 0x4b,
-	0x02, 0xab, 0x7d, 0xe8, 0xdb, 0x20, 0xdc, 0x14, 0xbe, 0x00, 0xe3, 0x2d, 0xa3, 0x6d, 0x78, 0xf3,
-	0x95, 0x45, 0xb4, 0x34, 0x46, 0xf8, 0x8b, 0xaa, 0xc0, 0x78, 0xb0, 0x0a, 0xff, 0x0f, 0x2a, 0xeb,
-	0x8d, 0xfa, 0xcc, 0x08, 0xfe, 0x3f, 0x8c, 0x6d, 0xde, 0x6b, 0xd4, 0x67, 0x90, 0xfa, 0x27, 0x82,
-	0x8b, 0xf7, 0x0d, 0xd7, 0xdb, 0xb6, 0xf4, 0x07, 0x41, 0x30, 0x5c, 0xc2, 0x0e, 0x3a, 0xcc, 0xf5,
-	0x70, 0x13, 0xa6, 0x4d, 0xda, 0x66, 0xae, 0x4d, 0x35, 0xa6, 0x37, 0xfd, 0xc7, 0xf0, 0xd8, 0xb7,
-	0x8a, 0x22, 0xdd, 0x8a, 0xb7, 0xfb, 0x4f, 0xa4, 0x6a, 0x26, 0xde, 0x7d, 0x07, 0x07, 0xfe, 0x59,
-	0x9a, 0x5a, 0x74, 0x98, 0x80, 0x0a, 0x09, 0x07, 0x49, 0x2a, 0x48, 0xf5, 0x20, 0xf1, 0xae, 0x7e,
-	0x83, 0xe0, 0xe5, 0xfe, 0xb3, 0xb9, 0xb6, 0x65, 0xba, 0x0c, 0x5f, 0x87, 0x09, 0x9e, 0xff, 0xe1,
-	0x99, 0x70, 0x8d, 0x57, 0x46, 0xcd, 0xb1, 0xb5, 0x5a, 0x23, 0xf8, 0x85, 0x84, 0x2b, 0x30, 0x81,
-	0x29, 0xdb, 0xd2, 0x9b, 0x3c, 0x57, 0xdd, 0xf9, 0xd1, 0xc5, 0x8a, 0x4c, 0xec, 0x63, 0xe7, 0x04,
-	0xec, 0x18, 0x47, 0x0c, 0x6d, 0xcb, 0xd2, 0x59, 0x1f, 0xef, 0x97, 0x01, 0x4c, 0x4b, 0x67, 0x01,
-	0xe3, 0x3e, 0xbc, 0xca, 0xd2, 0x24, 0x99, 0xf4, 0xff, 0x12, 0xd0, 0x79, 0xfa, 0xac, 0x7d, 0x8b,
-	0x60, 0x2e, 0x05, 0xad, 0x04, 0x6d, 0x1f, 0xc1, 0xb9, 0xe0, 0x1c, 0x49, 0xde, 0x56, 0x0b, 0x27,
-	0x4f, 0xec, 0x9e, 0x4c, 0x99, 0x5d, 0x28, 0xea, 0x13, 0x98, 0x09, 0x63, 0x5a, 0x0e, 0xd6, 0x1a,
-	0x8c, 0xd9, 0x96, 0x1e, 0xc1, 0xb9, 0x21, 0x11, 0x46, 0x12, 0x6c, 0x54, 0x8f, 0x47, 0x79, 0xe8,
-	0xd6, 0xf9, 0x52, 0x0e, 0xe4, 0x05, 0x95, 0xcc, 0x5d, 0x18, 0x7b, 0x6c, 0x98, 0x7a, 0x28, 0x19,
-	0x37, 0x8b, 0x5a, 0xfd, 0xc0, 0x30, 0x75, 0x12, 0xec, 0xec, 0xd3, 0xb1, 0xca, 0xc9, 0x75, 0x4c,
-	0x7d, 0xcc, 0xd3, 0x25, 0xa4, 0xc3, 0x0f, 0x5b, 0xcc, 0xc7, 0xd0, 0x45, 0x53, 0x5d, 0xe1, 0xd1,
-	0x4f, 0x78, 0x19, 0x5c, 0x30, 0xea, 0x17, 0x08, 0x66, 0x7b, 0xf6, 0x94, 0x48, 0x99, 0x0d, 0x18,
-	0xf7, 0xcd, 0x45, 0x39, 0x73, 0x53, 0x26, 0x85, 0x09, 0xdf, 0xaa, 0xfe, 0x85, 0x60, 0x21, 0xcc,
-	0xdb, 0x6d, 0x7e, 0x41, 0x1a, 0x96, 0x79, 0x86, 0xb4, 0xf6, 0x47, 0x04, 0x8a, 0xe8, 0x7c, 0x25,
-	0xe8, 0xfe, 0x04, 0xa6, 0x7d, 0xbd, 0xb5, 0xbb, 0x66, 0x42, 0xe2, 0xdf, 0x94, 0x28, 0xd6, 0x2e,
-	0x08, 0x52, 0xb5, 0x13, 0x98, 0x7c, 0x81, 0x53, 0xa2, 0x84, 0x10, 0xc4, 0xe2, 0xdf, 0xd6, 0xdf,
-	0x9f, 0x10, 0x5c, 0x12, 0xc2, 0x2b, 0x41, 0x25, 0x85, 0x99, 0xe0, 0x2c, 0x69, 0x2e, 0x6f, 0xc9,
-	0x24, 0x71, 0x0f, 0x99, 0xd3, 0x66, 0x12, 0x96, 0xfa, 0xc3, 0x28, 0x5c, 0x0e, 0x03, 0x4f, 0x12,
-	0x5d, 0xd7, 0xd9, 0x49, 0xee, 0x58, 0x76, 0x2b, 0x65, 0x65, 0x57, 0xfd, 0x0d, 0xc1, 0xab, 0x59,
-	0x2c, 0x95, 0x88, 0xeb, 0xa7, 0x70, 0xde, 0x2f, 0x91, 0x64, 0x9b, 0x1b, 0x85, 0xf6, 0x8e, 0xcc,
-	0x9d, 0x96, 0xb0, 0x40, 0xb0, 0x9d, 0xc2, 0xe7, 0x37, 0xc3, 0xaf, 0xf9, 0xd0, 0xeb, 0x96, 0xe9,
-	0x39, 0x56, 0xab, 0xc5, 0x9c, 0xb3, 0x1a, 0x67, 0xf5, 0x0f, 0x04, 0xaf, 0xe7, 0x1c, 0xb5, 0x44,
-	0xb0, 0x9e, 0x80, 0xa2, 0xc5, 0x06, 0x33, 0x62, 0x76, 0xb7, 0xe8, 0x09, 0xb2, 0xa0, 0x91, 0x05,
-	0x2d, 0x0b, 0xb4, 0xfa, 0x56, 0x2c, 0xcd, 0xee, 0xc6, 0xd1, 0x56, 0xa4, 0x64, 0x05, 0xaf, 0xcf,
-	0x67, 0x61, 0xf8, 0x1b, 0x46, 0xbb, 0xd3, 0xa2, 0x1e, 0xd3, 0x1b, 0xda, 0x3e, 0xd3, 0x3b, 0x2d,
-	0xc3, 0xdc, 0x6b, 0xf8, 0x23, 0x53, 0x6f, 0xf8, 0xfb, 0xa3, 0x83, 0x86, 0x1a, 0x9d, 0x9f, 0xc3,
-	0xe8, 0x0c, 0x40, 0x52, 0x22, 0x3a, 0x1f, 0xc3, 0x44, 0x30, 0xfa, 0x49, 0x47, 0x22, 0x0b, 0x06,
-	0x09, 0xed, 0xa9, 0x9f, 0xc1, 0xa5, 0xba, 0xc3, 0xa8, 0xc7, 0xc4, 0x77, 0xbe, 0xe0, 0x9a, 0x43,
-	0xc3, 0xbc, 0xe6, 0x3e, 0x47, 0xf0, 0x0a, 0xf7, 0x9f, 0x71, 0xd1, 0x89, 0x2e, 0x07, 0x34, 0xdc,
-	0xcb, 0xe1, 0x18, 0xc1, 0x95, 0x98, 0x83, 0x0c, 0xd9, 0xc8, 0xd0, 0x32, 0x74, 0x1a, 0x5a, 0xf6,
-	0x1c, 0xc1, 0x55, 0x8e, 0x27, 0x57, 0xcd, 0x06, 0x57, 0x2d, 0x3a, 0xfd, 0xaa, 0xdd, 0x81, 0xd9,
-	0x98, 0xba, 0x18, 0x55, 0x34, 0xbd, 0xa0, 0xb2, 0xd3, 0x8b, 0x09, 0x0b, 0xdc, 0xaa, 0xa8, 0x5f,
-	0x7f, 0x08, 0x2f, 0x45, 0xdf, 0x48, 0x78, 0xc3, 0x8b, 0x4a, 0x34, 0xbc, 0xe7, 0x68, 0x8f, 0x65,
-	0xf5, 0x69, 0xcc, 0x78, 0xae, 0x80, 0x74, 0x2b, 0x11, 0x0d, 0xb9, 0x12, 0x77, 0x60, 0x76, 0x93,
-	0xb5, 0xd8, 0xf0, 0xa9, 0xe4, 0x56, 0x5f, 0x0c, 0x95, 0xab, 0xbf, 0xce, 0x41, 0x75, 0x93, 0xff,
-	0xdc, 0x60, 0xce, 0xa1, 0xa1, 0x31, 0xfc, 0x15, 0x82, 0x6a, 0xf2, 0x0b, 0x07, 0x7e, 0xa7, 0xa8,
-	0x07, 0xe1, 0x57, 0x1f, 0xe5, 0xdd, 0xb2, 0xdb, 0xb9, 0xf4, 0xaa, 0x23, 0xf8, 0x6b, 0x04, 0xd3,
-	0x7d, 0xdf, 0x0f, 0xb0, 0x94, 0xd5, 0xf4, 0x37, 0x11, 0x65, 0xad, 0xf4, 0xfe, 0x18, 0xd6, 0x71,
-	0x08, 0xab, 0x67, 0x6c, 0x97, 0x83, 0x95, 0x9e, 0xf7, 0x95, 0xdb, 0x92, 0x64, 0xf5, 0xe2, 0xf9,
-	0x12, 0xf1, 0x51, 0xb6, 0x37, 0x79, 0xf0, 0x5a, 0x09, 0x40, 0xbd, 0x69, 0xa7, 0xdc, 0x91, 0x25,
-	0xaa, 0x17, 0xd2, 0x53, 0x04, 0x93, 0xf1, 0xdf, 0xf1, 0xed, 0x12, 0xa6, 0x86, 0x00, 0xe2, 0x3b,
-	0x04, 0x38, 0x3d, 0x48, 0xe2, 0x75, 0x49, 0xaa, 0xd3, 0xf7, 0x9d, 0xb2, 0x71, 0x12, 0x13, 0x31,
-	0xbe, 0xef, 0x11, 0x9c, 0x17, 0x8c, 0x67, 0x78, 0x43, 0xf6, 0xd0, 0x02, 0x84, 0xf5, 0x13, 0xd9,
-	0x88, 0x21, 0x3e, 0xef, 0x7e, 0xf7, 0xec, 0xbb, 0x54, 0xf0, 0x3d, 0x49, 0x0e, 0xc4, 0x97, 0xa3,
-	0xf2, 0xde, 0x49, 0xcd, 0xc4, 0x58, 0x7f, 0x41, 0x70, 0x25, 0x48, 0xe6, 0x43, 0x6a, 0xb4, 0xe8,
-	0x6e, 0x8b, 0xfd, 0x17, 0x40, 0xff, 0x8e, 0xf8, 0xcc, 0x9b, 0xd9, 0x44, 0xe0, 0xfb, 0x32, 0xbe,
-	0xf2, 0x7a, 0x11, 0xe5, 0xc1, 0x90, 0xac, 0xf5, 0x6a, 0x34, 0x4e, 0x8f, 0x04, 0x58, 0xb6, 0x42,
-	0x04, 0xe3, 0xc4, 0x89, 0x34, 0x31, 0xe2, 0x35, 0xb3, 0x55, 0x90, 0xe3, 0x35, 0xaf, 0xe3, 0x90,
-	0xe3, 0x35, 0x77, 0xec, 0x50, 0x47, 0xf0, 0x23, 0x80, 0x6e, 0xcf, 0x86, 0x0b, 0xeb, 0x60, 0xaa,
-	0xcf, 0x53, 0x04, 0x13, 0x8b, 0x3a, 0x82, 0xdb, 0x80, 0xd3, 0xcd, 0x5b, 0x71, 0x69, 0xcc, 0x6c,
-	0xfc, 0x32, 0xdc, 0x1d, 0xc0, 0x05, 0xd1, 0x00, 0x83, 0xeb, 0xd2, 0xe7, 0x12, 0x68, 0x9d, 0xd8,
-	0xa5, 0x0b, 0x17, 0x85, 0x33, 0x0b, 0xde, 0x94, 0xf3, 0x99, 0x21, 0xb0, 0x62, 0xa7, 0x47, 0x30,
-	0x9f, 0x35, 0xa4, 0xe0, 0xf7, 0xa5, 0xcf, 0x9a, 0x51, 0xc3, 0x62, 0xd7, 0xcf, 0xe2, 0x01, 0x29,
-	0x5b, 0x4b, 0xb6, 0xe4, 0x20, 0xe4, 0xaa, 0x49, 0x1e, 0x92, 0xec, 0xea, 0x93, 0x44, 0x92, 0x5b,
-	0x7f, 0x62, 0x24, 0x8f, 0x00, 0xba, 0xdd, 0x7a, 0xf1, 0x22, 0x4a, 0x75, 0xf8, 0xd9, 0x45, 0x94,
-	0x6e, 0xdb, 0x8b, 0x17, 0x51, 0x66, 0xcb, 0x2f, 0x76, 0xb7, 0x3b, 0x11, 0xfc, 0x4b, 0xf9, 0x8d,
-	0x7f, 0x02, 0x00, 0x00, 0xff, 0xff, 0x12, 0xef, 0x14, 0x08, 0xce, 0x1f, 0x00, 0x00,
+var fileDescriptor_server_5767d0b4733c5637 = []byte{
+	// 1688 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xdc, 0x5a, 0x5d, 0x6f, 0xdc, 0x44,
+	0x17, 0xce, 0xe4, 0xab, 0xdd, 0x93, 0xbe, 0x9b, 0x74, 0xda, 0xbe, 0xd9, 0x6e, 0x29, 0x0d, 0xa3,
+	0x52, 0xa5, 0x1f, 0xda, 0x28, 0x41, 0xad, 0x5a, 0xbe, 0xda, 0x64, 0xb7, 0x94, 0x88, 0x36, 0xa4,
+	0xde, 0x20, 0x10, 0x52, 0x59, 0x4d, 0xed, 0x21, 0x31, 0xf5, 0xda, 0x8e, 0xed, 0x0d, 0xda, 0x0b,
+	0x54, 0x51, 0x2e, 0x7a, 0x55, 0x09, 0x24, 0x10, 0x08, 0x8a, 0x04, 0x37, 0xa8, 0x15, 0x20, 0x24,
+	0xae, 0x7a, 0xd5, 0x3b, 0xfe, 0x01, 0x37, 0xf0, 0x0b, 0xf8, 0x19, 0xc8, 0x9f, 0x6b, 0xaf, 0xed,
+	0xac, 0xc7, 0xbb, 0x6d, 0x43, 0xee, 0xd6, 0x8e, 0xcf, 0x39, 0xcf, 0x3c, 0x67, 0xce, 0x33, 0xe7,
+	0x4c, 0x0b, 0x27, 0xa9, 0x42, 0x9b, 0x4c, 0xa2, 0x0d, 0xaa, 0xcb, 0x73, 0x5b, 0xf3, 0x54, 0xd1,
+	0x37, 0xe8, 0xfc, 0x9c, 0x44, 0x2d, 0xba, 0xd1, 0xba, 0x39, 0x67, 0x32, 0x63, 0x8b, 0x19, 0x15,
+	0xdd, 0xd0, 0x2c, 0x0d, 0x9f, 0x10, 0x35, 0xd5, 0xa2, 0xb2, 0xca, 0x0c, 0xb3, 0x41, 0xe5, 0x8a,
+	0x67, 0x58, 0xf1, 0x8d, 0x2a, 0x9e, 0x51, 0x79, 0x7a, 0x5d, 0xd3, 0xd6, 0x15, 0x36, 0x67, 0xe8,
+	0xe2, 0x9c, 0x69, 0x51, 0xab, 0x65, 0xba, 0x0e, 0xca, 0xa7, 0xb7, 0x8d, 0xd5, 0x64, 0x16, 0xb5,
+	0x7f, 0x7b, 0x1f, 0x9f, 0xda, 0xf6, 0x63, 0xdd, 0x60, 0x92, 0x2c, 0x5a, 0xde, 0xb7, 0x27, 0x7b,
+	0x39, 0x36, 0x64, 0x31, 0x13, 0x06, 0x83, 0x99, 0x5a, 0xcb, 0x10, 0x99, 0xf7, 0xf1, 0x7c, 0x8f,
+	0x8f, 0x45, 0xad, 0xd9, 0x64, 0xaa, 0x44, 0x2d, 0x59, 0x53, 0x3d, 0x93, 0xd9, 0xed, 0xf9, 0x14,
+	0x35, 0xc3, 0x73, 0x4e, 0xfe, 0x41, 0x50, 0xbc, 0xde, 0x62, 0x46, 0xbb, 0xaa, 0xa9, 0x92, 0x6c,
+	0xbb, 0xc0, 0xab, 0x00, 0x96, 0xdc, 0x64, 0x0d, 0x83, 0xaa, 0xeb, 0xac, 0x84, 0x66, 0xd0, 0xec,
+	0xc4, 0xc2, 0x7c, 0x25, 0x1b, 0xed, 0x95, 0x35, 0xb9, 0xc9, 0x04, 0xdb, 0x50, 0x28, 0x58, 0xfe,
+	0x4f, 0x2c, 0xc0, 0x98, 0x66, 0x48, 0xcc, 0x28, 0x0d, 0xcf, 0xa0, 0xd9, 0xe2, 0xc2, 0xab, 0x59,
+	0x9d, 0x45, 0x81, 0x55, 0xde, 0xb6, 0x7d, 0x08, 0xae, 0x2b, 0x7c, 0x10, 0xc6, 0x14, 0xb9, 0x29,
+	0x5b, 0xa5, 0x91, 0x19, 0x34, 0x3b, 0x2a, 0xb8, 0x0f, 0xa4, 0x0c, 0x63, 0xce, 0x57, 0x78, 0x0f,
+	0x8c, 0x2c, 0xd6, 0xab, 0x53, 0x43, 0x78, 0x2f, 0x8c, 0xd6, 0x2e, 0xd7, 0xab, 0x53, 0x88, 0xfc,
+	0x85, 0xe0, 0xd0, 0x55, 0xd9, 0xb4, 0x56, 0x35, 0xe9, 0x9a, 0x93, 0x0c, 0x53, 0x60, 0x9b, 0x2d,
+	0x66, 0x5a, 0xb8, 0x01, 0x93, 0x2a, 0x6d, 0x32, 0x53, 0xa7, 0x22, 0x93, 0x1a, 0xf6, 0x4f, 0x6f,
+	0xd9, 0xe7, 0xb2, 0x22, 0x5d, 0x09, 0xcc, 0xed, 0x5f, 0x42, 0x51, 0x8d, 0x3c, 0xdb, 0x01, 0x36,
+	0xed, 0xb5, 0x34, 0x44, 0x7f, 0x31, 0x0e, 0x15, 0x1c, 0x01, 0xa2, 0x54, 0x08, 0xc5, 0xcd, 0xc8,
+	0x33, 0xf9, 0x06, 0xc1, 0xff, 0xbb, 0xd7, 0x66, 0xea, 0x9a, 0x6a, 0x32, 0x7c, 0x0a, 0xc6, 0xdd,
+	0xfd, 0xef, 0xad, 0x09, 0x57, 0xdc, 0xca, 0xa8, 0x18, 0xba, 0x58, 0xa9, 0x3b, 0x7f, 0x11, 0xbc,
+	0x2f, 0xb0, 0x00, 0x13, 0xba, 0x26, 0x35, 0xdc, 0xbd, 0x6a, 0x96, 0x86, 0x67, 0x46, 0x78, 0x72,
+	0x1f, 0x04, 0x17, 0x40, 0x0f, 0x70, 0x04, 0xd0, 0x56, 0x34, 0x89, 0x75, 0xf1, 0x7e, 0x14, 0x40,
+	0xd5, 0x24, 0xe6, 0x30, 0x6e, 0xc3, 0x1b, 0x99, 0x2d, 0x08, 0x05, 0xfb, 0x8d, 0x43, 0xe7, 0x93,
+	0x67, 0xed, 0x3e, 0x82, 0xe9, 0x18, 0xb4, 0x1c, 0xb4, 0xbd, 0x03, 0xfb, 0x9c, 0x75, 0x44, 0x79,
+	0x5b, 0xc8, 0xbc, 0x79, 0x82, 0xf0, 0xc2, 0x84, 0xda, 0x81, 0x42, 0x6e, 0xc3, 0x94, 0x97, 0xd3,
+	0x7c, 0xb0, 0x2e, 0xc2, 0xa8, 0xae, 0x49, 0x3e, 0x9c, 0xd3, 0x1c, 0x69, 0x14, 0x1c, 0x43, 0x72,
+	0x6f, 0xd8, 0x4d, 0xdd, 0xa2, 0xfb, 0xa9, 0x0b, 0xe4, 0x29, 0x95, 0xcc, 0x25, 0x18, 0xbd, 0x25,
+	0xab, 0x92, 0x27, 0x19, 0x67, 0xb2, 0x7a, 0x7d, 0x4b, 0x56, 0x25, 0xc1, 0xb1, 0xec, 0xd2, 0xb1,
+	0x91, 0xfe, 0x75, 0x8c, 0xdc, 0x72, 0xb7, 0x8b, 0x47, 0x87, 0x9d, 0xb6, 0x80, 0x8f, 0x81, 0x8b,
+	0x26, 0x99, 0x77, 0xb3, 0x1f, 0x89, 0xb2, 0x7d, 0xc1, 0x90, 0xcf, 0x10, 0xec, 0x0f, 0xd9, 0xe4,
+	0xd8, 0x32, 0x4b, 0x30, 0x66, 0xbb, 0xf3, 0xf7, 0xcc, 0x19, 0x9e, 0x2d, 0x2c, 0xb8, 0xa6, 0xe4,
+	0x6f, 0xaf, 0xe0, 0xab, 0x9a, 0x6a, 0x19, 0x9a, 0xa2, 0x30, 0x63, 0x17, 0x09, 0xed, 0x77, 0x9e,
+	0x64, 0x44, 0x16, 0x97, 0x83, 0xe8, 0x35, 0x98, 0x10, 0x3b, 0x2e, 0x78, 0x15, 0xa3, 0x13, 0x5d,
+	0x08, 0xbb, 0x21, 0xf7, 0x87, 0xe1, 0xb0, 0x27, 0x19, 0xab, 0x6e, 0x6f, 0x22, 0x6b, 0xea, 0xee,
+	0x61, 0x1f, 0xcf, 0xc0, 0xc4, 0xba, 0x41, 0xd5, 0x96, 0x42, 0x0d, 0xd9, 0x6a, 0x3b, 0x35, 0x3d,
+	0x22, 0x84, 0x5f, 0xe1, 0x23, 0x50, 0xf8, 0x50, 0x56, 0x94, 0x86, 0x44, 0xdb, 0x66, 0x69, 0xd4,
+	0xf9, 0xfb, 0x5e, 0xfb, 0x45, 0x8d, 0xb6, 0x4d, 0xf2, 0x00, 0x41, 0x39, 0x89, 0x9e, 0x1c, 0xf9,
+	0xfb, 0x00, 0x26, 0xed, 0x93, 0x52, 0xef, 0xb8, 0xf1, 0x72, 0x78, 0x96, 0x43, 0x66, 0x3b, 0x20,
+	0x84, 0xa2, 0x1e, 0xc1, 0x44, 0x1e, 0x7b, 0x50, 0xed, 0xc2, 0x4a, 0x48, 0xe5, 0x33, 0x3e, 0x39,
+	0x7b, 0x27, 0x82, 0xfc, 0x82, 0xe0, 0x48, 0xe2, 0x02, 0x72, 0x90, 0x4d, 0x61, 0xca, 0x59, 0x6d,
+	0x9c, 0xed, 0x73, 0x3c, 0x02, 0x15, 0xa2, 0x7b, 0x52, 0x8d, 0xc2, 0x22, 0x7f, 0x0c, 0xc3, 0x51,
+	0x6f, 0x6b, 0x08, 0x91, 0x8e, 0x7a, 0x17, 0x55, 0x8f, 0x7f, 0xa4, 0x8e, 0xe4, 0x3e, 0x52, 0xbb,
+	0xd2, 0x3e, 0x1a, 0x4f, 0xfb, 0x23, 0x04, 0xcf, 0xa7, 0xf1, 0x98, 0x23, 0xf3, 0x1f, 0xc1, 0x01,
+	0xbb, 0xcc, 0xa2, 0x43, 0x8e, 0x9f, 0xfc, 0x0b, 0x3c, 0x1d, 0x4d, 0xc4, 0x83, 0x80, 0xf5, 0x18,
+	0x3e, 0x7b, 0x14, 0x3a, 0x1e, 0x95, 0xf6, 0xdd, 0xba, 0x13, 0xc8, 0x9f, 0x08, 0x5e, 0xec, 0xb1,
+	0xd4, 0x1c, 0xc9, 0xba, 0x0d, 0xe5, 0xce, 0x61, 0x94, 0x92, 0xb3, 0x4b, 0x39, 0x8e, 0xb8, 0x68,
+	0xea, 0x0e, 0x8b, 0x69, 0xa0, 0xc9, 0x2b, 0x81, 0xbc, 0x9b, 0x4b, 0xed, 0x15, 0x5f, 0x0d, 0x33,
+	0x36, 0x4f, 0x77, 0xbd, 0xf4, 0xd7, 0xe5, 0x66, 0x4b, 0xa1, 0x16, 0x93, 0xea, 0xe2, 0x06, 0x93,
+	0x5a, 0x8a, 0xac, 0xae, 0xd7, 0xed, 0x81, 0x39, 0x9c, 0xfe, 0xee, 0xec, 0xa0, 0x81, 0x66, 0xe7,
+	0x57, 0x2f, 0x3b, 0xdb, 0x20, 0xc9, 0x91, 0x9d, 0xf7, 0x60, 0xdc, 0x19, 0xfc, 0xb9, 0x33, 0x91,
+	0x06, 0x43, 0xf0, 0xfc, 0x91, 0x4f, 0xe0, 0x48, 0xd5, 0x60, 0xd4, 0x62, 0xc9, 0x6d, 0x47, 0xc2,
+	0x51, 0x89, 0x06, 0x79, 0x54, 0x7e, 0x8a, 0xe0, 0x39, 0x37, 0x7e, 0xca, 0x61, 0x99, 0x74, 0x7c,
+	0xa0, 0xc1, 0x1e, 0x1f, 0xbf, 0x21, 0x38, 0x16, 0x70, 0x90, 0x22, 0x1b, 0x29, 0x5a, 0x86, 0x9e,
+	0x80, 0x96, 0x75, 0x0b, 0xf5, 0x70, 0x5c, 0xa8, 0x1f, 0x22, 0x38, 0xe1, 0x22, 0xee, 0xa9, 0x77,
+	0xdb, 0xd7, 0x35, 0x7a, 0xf2, 0x75, 0xbd, 0x06, 0xfb, 0x03, 0x72, 0x03, 0x54, 0xfe, 0x74, 0x8b,
+	0xf2, 0x4e, 0xb7, 0x3a, 0x94, 0xba, 0x09, 0x08, 0x9c, 0x77, 0xb5, 0xe7, 0x68, 0x30, 0xed, 0xb9,
+	0x0a, 0x87, 0xdd, 0x88, 0x49, 0x13, 0xe4, 0x75, 0xf8, 0x9f, 0x7f, 0x6b, 0xe7, 0x8e, 0x60, 0x28,
+	0xc7, 0x08, 0xb6, 0x8f, 0x86, 0x3c, 0x93, 0x3b, 0x41, 0x8e, 0x7b, 0x8a, 0x5a, 0x47, 0x1d, 0xd0,
+	0x80, 0xd5, 0x61, 0x0d, 0xf6, 0xd7, 0x98, 0xc2, 0x06, 0x9f, 0x3c, 0xd7, 0xeb, 0xd3, 0x4c, 0x9e,
+	0x1b, 0xf1, 0x29, 0x25, 0xef, 0xac, 0x7b, 0x98, 0xbd, 0xcb, 0xe8, 0x16, 0xab, 0x8b, 0x9a, 0xce,
+	0xde, 0xd4, 0x4c, 0x2b, 0x08, 0x38, 0x0d, 0x7b, 0x36, 0x34, 0xd3, 0x6a, 0xc8, 0x92, 0x23, 0xfd,
+	0x05, 0x61, 0xdc, 0x7e, 0x5c, 0x96, 0xc8, 0x82, 0x3b, 0x01, 0x76, 0xcc, 0xc2, 0xb4, 0x1f, 0x82,
+	0x71, 0x5b, 0x82, 0x02, 0xa3, 0x31, 0x5d, 0x93, 0x96, 0x25, 0x52, 0x83, 0x63, 0x51, 0x9b, 0x6a,
+	0x80, 0xda, 0xb7, 0x7c, 0x01, 0xf6, 0x05, 0x4b, 0xe9, 0xd8, 0x4f, 0x04, 0xef, 0x96, 0x25, 0xf2,
+	0x3e, 0xe0, 0x8e, 0x87, 0x5c, 0x47, 0x54, 0x09, 0xf6, 0x18, 0xf4, 0x63, 0x9b, 0x13, 0x47, 0xb1,
+	0x0a, 0x82, 0xff, 0xb8, 0xf0, 0xe8, 0x38, 0x14, 0x6b, 0x2e, 0x57, 0x75, 0x66, 0x6c, 0xc9, 0x22,
+	0xc3, 0x5f, 0x20, 0x28, 0x46, 0xaf, 0x3c, 0xf1, 0x6b, 0x59, 0xe9, 0x4e, 0xbc, 0x06, 0x2e, 0xbf,
+	0x9e, 0xd7, 0xdc, 0x5d, 0x2a, 0x19, 0xc2, 0x5f, 0x22, 0x98, 0xec, 0xba, 0x50, 0xc4, 0x5c, 0x5e,
+	0xe3, 0x97, 0xa4, 0xe5, 0x8b, 0xb9, 0xed, 0x03, 0x58, 0xf7, 0x3c, 0x58, 0xa1, 0x7b, 0x3c, 0x3e,
+	0x58, 0xf1, 0x0b, 0xc0, 0xf2, 0x79, 0x4e, 0xb2, 0xc2, 0x78, 0x3e, 0x47, 0xee, 0xdd, 0x56, 0xb8,
+	0x92, 0xf0, 0xc5, 0x1c, 0x80, 0xc2, 0x35, 0x58, 0xbe, 0xc0, 0x4b, 0x54, 0x18, 0xd2, 0x1d, 0x04,
+	0x85, 0xe0, 0x3d, 0x3e, 0x9f, 0xc3, 0xd5, 0x00, 0x40, 0xf8, 0xdb, 0x27, 0xa4, 0x69, 0x7c, 0x79,
+	0x8a, 0x8b, 0x21, 0xdf, 0xf6, 0x49, 0xb8, 0xd5, 0x22, 0x43, 0xf8, 0x7b, 0x04, 0x38, 0x7e, 0x6d,
+	0x82, 0x17, 0x39, 0x77, 0x40, 0xbc, 0x33, 0x2b, 0x2f, 0xf5, 0xe3, 0x22, 0xc0, 0xf7, 0x03, 0x82,
+	0x03, 0x09, 0x57, 0x0d, 0x78, 0x89, 0x37, 0x17, 0x09, 0x08, 0xab, 0x7d, 0xf9, 0x08, 0x20, 0x3e,
+	0xec, 0xfc, 0xfb, 0x4c, 0x77, 0xab, 0x76, 0x99, 0x93, 0x83, 0xe4, 0x26, 0xad, 0xfc, 0x46, 0xbf,
+	0x6e, 0x02, 0xac, 0xbf, 0x23, 0xf7, 0x38, 0x58, 0xdc, 0xa2, 0xb2, 0x42, 0x6f, 0x2a, 0xec, 0xbf,
+	0x00, 0xfa, 0x31, 0x72, 0xef, 0x6f, 0x52, 0x9b, 0x59, 0x7c, 0x35, 0x5f, 0x21, 0xa4, 0x20, 0xbf,
+	0x36, 0x20, 0x6f, 0xe1, 0xda, 0xc7, 0xf1, 0xe1, 0x15, 0xf3, 0x56, 0x48, 0xc2, 0xe0, 0xdb, 0x97,
+	0x54, 0xfb, 0xbc, 0xa6, 0x36, 0x90, 0x7c, 0xbc, 0xf6, 0xea, 0x43, 0xf9, 0x78, 0xed, 0x39, 0x20,
+	0x93, 0x21, 0x7c, 0x03, 0xa0, 0x33, 0x3b, 0xe0, 0xcc, 0xf2, 0x1c, 0x9b, 0x37, 0xca, 0x09, 0x8d,
+	0x0b, 0x19, 0xc2, 0xb7, 0xfc, 0xd1, 0x24, 0xac, 0xd9, 0x97, 0xf8, 0xa2, 0x24, 0xa8, 0x76, 0x72,
+	0xb0, 0x26, 0xe0, 0xf8, 0xfc, 0x90, 0x5d, 0x87, 0x53, 0x67, 0x8f, 0x94, 0x70, 0x9b, 0x70, 0x30,
+	0x69, 0xae, 0xc7, 0x55, 0x6e, 0x12, 0x13, 0x84, 0x35, 0x39, 0xa4, 0x09, 0x87, 0x12, 0x47, 0x79,
+	0x5c, 0xe3, 0x8b, 0x99, 0xa2, 0xe6, 0xc9, 0x41, 0xdb, 0xfe, 0x20, 0x98, 0x20, 0x74, 0x57, 0xb8,
+	0xd7, 0x9a, 0x22, 0x18, 0xc9, 0xa1, 0xef, 0x06, 0xf7, 0x06, 0xe9, 0xc2, 0xb5, 0x92, 0x77, 0x37,
+	0xe5, 0x44, 0x92, 0x5e, 0xea, 0x9c, 0x48, 0x7a, 0x16, 0x7b, 0x32, 0x92, 0x1b, 0x00, 0x9d, 0x81,
+	0x31, 0x7b, 0xc5, 0xc6, 0x86, 0xcc, 0xf4, 0x8a, 0x8d, 0x4d, 0x8e, 0xd9, 0x2b, 0x36, 0x6d, 0xe8,
+	0x4c, 0xaf, 0xd8, 0xf8, 0xd0, 0x98, 0xbd, 0x62, 0x53, 0x07, 0xce, 0x94, 0x70, 0x5f, 0x7b, 0x9d,
+	0x50, 0xd7, 0xd0, 0xc8, 0x77, 0x8a, 0x24, 0x4f, 0x9c, 0xe5, 0x97, 0xb3, 0xfa, 0x88, 0x0f, 0x81,
+	0x64, 0x08, 0xdf, 0x47, 0x50, 0xba, 0xc2, 0xba, 0x7c, 0xd7, 0x98, 0x45, 0x65, 0x65, 0x27, 0xc0,
+	0xfb, 0xca, 0x3b, 0x7d, 0xa3, 0x63, 0x33, 0x5f, 0x8b, 0x9b, 0x38, 0x72, 0xf7, 0x89, 0xeb, 0x5b,
+	0x04, 0xd3, 0x11, 0xda, 0x56, 0x35, 0xc9, 0x67, 0xed, 0x99, 0x83, 0xfb, 0x11, 0x41, 0x29, 0xed,
+	0xde, 0x20, 0xbb, 0x70, 0xf6, 0xb8, 0x79, 0xe8, 0x13, 0xe3, 0xcf, 0x08, 0x48, 0x5a, 0x84, 0xa5,
+	0xb6, 0xbd, 0x83, 0x54, 0xbb, 0xcd, 0xda, 0x21, 0x68, 0x1f, 0xa0, 0xf4, 0x9b, 0x98, 0xa5, 0xf6,
+	0x72, 0x93, 0xae, 0xef, 0x18, 0xa8, 0x3f, 0x21, 0x38, 0x1a, 0xd9, 0x99, 0x41, 0x00, 0x7f, 0x7f,
+	0xee, 0x0c, 0xa0, 0x37, 0xc7, 0x9d, 0xff, 0xe8, 0xf8, 0xd2, 0xbf, 0x01, 0x00, 0x00, 0xff, 0xff,
+	0xfd, 0x5c, 0x44, 0x38, 0x64, 0x2a, 0x00, 0x00,
 }

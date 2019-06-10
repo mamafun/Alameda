@@ -9,12 +9,13 @@ import (
 	cluster_status_dao_impl "github.com/containers-ai/alameda/datahub/pkg/dao/cluster_status/impl"
 	metric_dao "github.com/containers-ai/alameda/datahub/pkg/dao/metric"
 	prometheusMetricDAO "github.com/containers-ai/alameda/datahub/pkg/dao/metric/prometheus"
-	prediction_dao "github.com/containers-ai/alameda/datahub/pkg/dao/prediction"
 	prediction_dao_impl "github.com/containers-ai/alameda/datahub/pkg/dao/prediction/impl"
 	recommendation_dao "github.com/containers-ai/alameda/datahub/pkg/dao/recommendation"
 	recommendation_dao_impl "github.com/containers-ai/alameda/datahub/pkg/dao/recommendation/impl"
 	"github.com/containers-ai/alameda/datahub/pkg/dao/score"
 	"github.com/containers-ai/alameda/datahub/pkg/dao/score/impl/influxdb"
+	"github.com/containers-ai/alameda/datahub/pkg/dao/weavescope"
+
 	datahubUtil "github.com/containers-ai/alameda/datahub/pkg/utils"
 	"github.com/containers-ai/alameda/operator/pkg/apis"
 	autoscaling_v1alpha1 "github.com/containers-ai/alameda/operator/pkg/apis/autoscaling/v1alpha1"
@@ -495,6 +496,33 @@ func (s *Server) ListNodes(ctx context.Context, in *datahub_v1alpha1.ListNodesRe
 	}
 }
 
+func (s *Server) ListControllers(ctx context.Context, in *datahub_v1alpha1.ListControllersRequest) (*datahub_v1alpha1.ListControllersResponse, error) {
+	scope.Debug("Request received from ListControllers grpc function: " + utils.InterfaceToString(in))
+
+	controllerDAO := &cluster_status_dao_impl.Controller{
+		InfluxDBConfig: *s.Config.InfluxDB,
+	}
+
+	controllers, err := controllerDAO.ListControllers(in)
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.ListControllersResponse{
+			Status: &status.Status{
+				Code:    int32(code.Code_INTERNAL),
+				Message: err.Error(),
+			},
+		}, nil
+	}
+
+	response := datahub_v1alpha1.ListControllersResponse{
+		Status: &status.Status{
+			Code: int32(code.Code_OK),
+		},
+		Controllers: controllers,
+	}
+	return &response, nil
+}
+
 // ListPodPredictions list pods' predictions
 func (s *Server) ListPodPredictions(ctx context.Context, in *datahub_v1alpha1.ListPodPredictionsRequest) (*datahub_v1alpha1.ListPodPredictionsResponse, error) {
 	scope.Debug("Request received from ListPodPredictions grpc function: " + utils.InterfaceToString(in))
@@ -506,18 +534,13 @@ func (s *Server) ListPodPredictions(ctx context.Context, in *datahub_v1alpha1.Li
 	}
 
 	//--------------------------------------------------------
-	var (
-		predictionDAO prediction_dao.DAO
-
-		podsPredicitonMap     *prediction_dao.PodsPredictionMap
-		datahubPodPredicitons []*datahub_v1alpha1.PodPrediction
-	)
-
-	predictionDAO = prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
+	predictionDAO := prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
 
 	datahubListPodPredictionsRequestExtended := datahubListPodPredictionsRequestExtended{in}
 	listPodPredictionsRequest := datahubListPodPredictionsRequestExtended.daoListPodPredictionsRequest()
-	podsPredicitonMap, err = predictionDAO.ListPodPredictions(listPodPredictionsRequest)
+
+	podsPredicitons, err := predictionDAO.ListPodPredictions(listPodPredictionsRequest)
+
 	if err != nil {
 		scope.Errorf("ListPodPrediction failed: %+v", err)
 		return &datahub_v1alpha1.ListPodPredictionsResponse{
@@ -528,16 +551,15 @@ func (s *Server) ListPodPredictions(ctx context.Context, in *datahub_v1alpha1.Li
 		}, nil
 	}
 
-	for _, ptrPodPrediction := range *podsPredicitonMap {
-		podPredicitonExtended := daoPtrPodPredictionExtended{ptrPodPrediction}
-		datahubPodPrediction := podPredicitonExtended.datahubPodPrediction()
-		datahubPodPredicitons = append(datahubPodPredicitons, datahubPodPrediction)
+	if in.GetFillDays() > 0 {
+		predictionDAO.FillPodPredictions(podsPredicitons, in.GetFillDays())
 	}
+
 	return &datahub_v1alpha1.ListPodPredictionsResponse{
 		Status: &status.Status{
 			Code: int32(code.Code_OK),
 		},
-		PodPredictions: datahubPodPredicitons,
+		PodPredictions: podsPredicitons,
 	}, nil
 }
 
@@ -641,20 +663,11 @@ func (s *Server) ListPodPredictionsDemo(ctx context.Context, in *datahub_v1alpha
 func (s *Server) ListNodePredictions(ctx context.Context, in *datahub_v1alpha1.ListNodePredictionsRequest) (*datahub_v1alpha1.ListNodePredictionsResponse, error) {
 	scope.Debug("Request received from ListNodePredictions grpc function: " + utils.InterfaceToString(in))
 
-	var (
-		err error
-
-		predictionDAO prediction_dao.DAO
-
-		nodesPredicitonMap     *prediction_dao.NodesPredictionMap
-		datahubNodePredicitons []*datahub_v1alpha1.NodePrediction
-	)
-
-	predictionDAO = prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
+	predictionDAO := prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
 
 	datahubListNodePredictionsRequestExtended := datahubListNodePredictionsRequestExtended{in}
 	listNodePredictionRequest := datahubListNodePredictionsRequestExtended.daoListNodePredictionsRequest()
-	nodesPredicitonMap, err = predictionDAO.ListNodePredictions(listNodePredictionRequest)
+	nodePredictions, err := predictionDAO.ListNodePredictions(listNodePredictionRequest)
 	if err != nil {
 		scope.Errorf("ListNodePredictions failed: %+v", err)
 		return &datahub_v1alpha1.ListNodePredictionsResponse{
@@ -665,13 +678,11 @@ func (s *Server) ListNodePredictions(ctx context.Context, in *datahub_v1alpha1.L
 		}, nil
 	}
 
-	datahubNodePredicitons = daoPtrNodesPredictionMapExtended{nodesPredicitonMap}.datahubNodePredictions()
-
 	return &datahub_v1alpha1.ListNodePredictionsResponse{
 		Status: &status.Status{
 			Code: int32(code.Code_OK),
 		},
-		NodePredictions: datahubNodePredicitons,
+		NodePredictions: nodePredictions,
 	}, nil
 }
 
@@ -682,9 +693,8 @@ func (s *Server) ListPodRecommendations(ctx context.Context, in *datahub_v1alpha
 		InfluxDBConfig: *s.Config.InfluxDB,
 	}
 
-	if podRecommendations, err := containerDAO.ListPodRecommendations(in.GetNamespacedName(),
-		in.GetQueryCondition(),
-		in.GetKind()); err != nil {
+	podRecommendations, err := containerDAO.ListPodRecommendations(in)
+	if err != nil {
 		scope.Error(err.Error())
 		return &datahub_v1alpha1.ListPodRecommendationsResponse{
 			Status: &status.Status{
@@ -692,16 +702,16 @@ func (s *Server) ListPodRecommendations(ctx context.Context, in *datahub_v1alpha
 				Message: err.Error(),
 			},
 		}, nil
-	} else {
-		res := &datahub_v1alpha1.ListPodRecommendationsResponse{
-			Status: &status.Status{
-				Code: int32(code.Code_OK),
-			},
-			PodRecommendations: podRecommendations,
-		}
-		scope.Debug("Response sent from ListPodRecommendations grpc function: " + utils.InterfaceToString(res))
-		return res, nil
 	}
+
+	res := &datahub_v1alpha1.ListPodRecommendationsResponse{
+		Status: &status.Status{
+			Code: int32(code.Code_OK),
+		},
+		PodRecommendations: podRecommendations,
+	}
+	scope.Debug("Response sent from ListPodRecommendations grpc function: " + utils.InterfaceToString(res))
+	return res, nil
 }
 
 // ListAvailablePodRecommendations list pod recommendations
@@ -852,6 +862,48 @@ func (s *Server) CreatePods(ctx context.Context, in *datahub_v1alpha1.CreatePods
 	}, nil
 }
 
+func (s *Server) CreateControllers(ctx context.Context, in *datahub_v1alpha1.CreateControllersRequest) (*status.Status, error) {
+	scope.Debug("Request received from CreateControllers grpc function: " + utils.InterfaceToString(in))
+
+	controllerDAO := &cluster_status_dao_impl.Controller{
+		InfluxDBConfig: *s.Config.InfluxDB,
+	}
+
+	err := controllerDAO.CreateControllers(in.GetControllers())
+	if err != nil {
+		scope.Error(err.Error())
+		return &status.Status{
+			Code:    int32(code.Code_INTERNAL),
+			Message: err.Error(),
+		}, nil
+	}
+
+	return &status.Status{
+		Code: int32(code.Code_OK),
+	}, nil
+}
+
+func (s *Server) DeleteControllers(ctx context.Context, in *datahub_v1alpha1.DeleteControllersRequest) (*status.Status, error) {
+	scope.Debug("Request received from DeleteControllers grpc function: " + utils.InterfaceToString(in))
+
+	controllerDAO := &cluster_status_dao_impl.Controller{
+		InfluxDBConfig: *s.Config.InfluxDB,
+	}
+
+	err := controllerDAO.DeleteControllers(in)
+	if err != nil {
+		scope.Error(err.Error())
+		return &status.Status{
+			Code:    int32(code.Code_INTERNAL),
+			Message: err.Error(),
+		}, nil
+	}
+
+	return &status.Status{
+		Code: int32(code.Code_OK),
+	}, nil
+}
+
 // DeletePods update containers information of pods to database
 func (s *Server) DeletePods(ctx context.Context, in *datahub_v1alpha1.DeletePodsRequest) (*status.Status, error) {
 	scope.Debug("Request received from DeletePods grpc function: " + utils.InterfaceToString(in))
@@ -895,17 +947,8 @@ func (s *Server) CreateAlamedaNodes(ctx context.Context, in *datahub_v1alpha1.Cr
 func (s *Server) CreatePodPredictions(ctx context.Context, in *datahub_v1alpha1.CreatePodPredictionsRequest) (*status.Status, error) {
 	scope.Debug("Request received from CreatePodPredictions grpc function: " + utils.InterfaceToString(in))
 
-	var (
-		err error
-
-		predictionDAO        prediction_dao.DAO
-		containersPrediciton []*prediction_dao.ContainerPrediction
-	)
-
-	predictionDAO = prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
-
-	containersPrediciton = datahubCreatePodPredictionsRequestExtended{*in}.daoContainerPredictions()
-	err = predictionDAO.CreateContainerPredictions(containersPrediciton)
+	predictionDAO := prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
+	err := predictionDAO.CreateContainerPredictions(in)
 	if err != nil {
 		scope.Errorf("create pod predictions failed: %+v", err.Error())
 		return &status.Status{
@@ -923,17 +966,8 @@ func (s *Server) CreatePodPredictions(ctx context.Context, in *datahub_v1alpha1.
 func (s *Server) CreateNodePredictions(ctx context.Context, in *datahub_v1alpha1.CreateNodePredictionsRequest) (*status.Status, error) {
 	scope.Debug("Request received from CreateNodePredictions grpc function: " + utils.InterfaceToString(in))
 
-	var (
-		err error
-
-		predictionDAO   prediction_dao.DAO
-		nodesPrediciton []*prediction_dao.NodePrediction
-	)
-
-	predictionDAO = prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
-
-	nodesPrediciton = datahubCreateNodePredictionsRequestExtended{*in}.daoNodePredictions()
-	err = predictionDAO.CreateNodePredictions(nodesPrediciton)
+	predictionDAO := prediction_dao_impl.NewInfluxDBWithConfig(*s.Config.InfluxDB)
+	err := predictionDAO.CreateNodePredictions(in)
 	if err != nil {
 		scope.Errorf("create node predictions failed: %+v", err.Error())
 		return &status.Status{
@@ -975,7 +1009,7 @@ func (s *Server) CreatePodRecommendations(ctx context.Context, in *datahub_v1alp
 		}
 	}
 
-	if err := containerDAO.AddPodRecommendations(podRecommendations); err != nil {
+	if err := containerDAO.AddPodRecommendations(in); err != nil {
 		scope.Error(err.Error())
 		return &status.Status{
 			Code:    int32(code.Code_INTERNAL),
@@ -1078,4 +1112,181 @@ func (s *Server) DeleteAlamedaNodes(ctx context.Context, in *datahub_v1alpha1.De
 	return &status.Status{
 		Code: int32(code.Code_OK),
 	}, nil
+}
+
+func (s *Server) ListWeaveScopeHosts(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopeHostsRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+
+	rawdata, err := weaveScopeDAO.ListWeaveScopeHosts(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) GetWeaveScopeHostDetails(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopeHostsRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.GetWeaveScopeHostDetails(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) ListWeaveScopePods(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopePodsRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.ListWeaveScopePods(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) GetWeaveScopePodDetails(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopePodsRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.GetWeaveScopePodDetails(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) ListWeaveScopeContainers(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopeContainersRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.ListWeaveScopeContainers(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) ListWeaveScopeContainersByHostname(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopeContainersRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.ListWeaveScopeContainersByHostname(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) ListWeaveScopeContainersByImage(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopeContainersRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.ListWeaveScopeContainersByImage(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
+}
+
+func (s *Server) GetWeaveScopeContainerDetails(ctx context.Context, in *datahub_v1alpha1.ListWeaveScopeContainersRequest) (*datahub_v1alpha1.WeaveScopeResponse, error) {
+	response := &datahub_v1alpha1.WeaveScopeResponse{}
+
+	weaveScopeDAO := weavescope.WeaveScope{
+		WeaveScopeConfig: s.Config.WeaveScope,
+	}
+	rawdata, err := weaveScopeDAO.GetWeaveScopeContainerDetails(in)
+
+	if err != nil {
+		scope.Error(err.Error())
+		return &datahub_v1alpha1.WeaveScopeResponse{
+			Status: &status.Status{
+				Code: int32(code.Code_OK),
+			},
+			Rawdata: rawdata,
+		}, nil
+	}
+
+	response.Rawdata = rawdata
+	return response, nil
 }

@@ -27,11 +27,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:c3ced89c0ff7e6fdbbbdc7341e18dacd493eb5e00683901c52b13d4f45c5c03b"
+  digest = "1:948c1021b3d0596fc32b9d8f7a0f0ba621449271d2ad20f6ce7fd49aa923dce5"
   name = "github.com/containers-ai/api"
   packages = ["alameda_api/v1alpha1/datahub"]
   pruneopts = "T"
-  revision = "bc4e6c0f00f0e49c95ab48294aa69f82319c5724"
+  revision = "bb924f2a6cbdbda9b51c66a34374c7758bb736d6"
 
 [[projects]]
   digest = "1:9f42202ac457c462ad8bb9642806d275af9ab4850cf0b1960b9c6f083d4a309a"
@@ -1137,6 +1137,8 @@
     "k8s.io/api/admission/v1beta1",
     "k8s.io/api/admissionregistration/v1beta1",
     "k8s.io/api/apps/v1",
+    "k8s.io/api/apps/v1beta1",
+    "k8s.io/api/apps/v1beta2",
     "k8s.io/api/core/v1",
     "k8s.io/api/extensions/v1beta1",
     "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1",

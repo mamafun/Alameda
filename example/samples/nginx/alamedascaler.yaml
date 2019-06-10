@@ -5,7 +5,9 @@ metadata:
   namespace: webapp
 spec:
   policy: stable
-  enableExecution: true
+  enableexecution: true
+  scalingTools:
+  - vpa
   selector:
     matchLabels:
       app: nginx

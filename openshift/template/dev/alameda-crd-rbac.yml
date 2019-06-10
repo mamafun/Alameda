@@ -91,13 +91,20 @@ objects:
             properties:
               customResourceVersion:
                 type: string
-              enableExecution:
+              enableexecution:
                 type: boolean
               policy:
                 enum:
                 - stable
                 - compact
                 type: string
+              scalingTools:
+                items:
+                  enum:
+                  - vpa
+                  - hpa
+                  type: string
+                type: array
               selector:
                 description: 'Important: Run "make" to regenerate code after modifying this file'
                 type: object
@@ -112,9 +119,6 @@ objects:
                     type: object
                   deployments:
                     type: object
-                required:
-                - deployments
-                - deploymentconfigs
                 type: object
             type: object
     version: v1alpha1

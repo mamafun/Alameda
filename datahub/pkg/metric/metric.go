@@ -9,8 +9,13 @@ import (
 // ContainerMetricType Type alias
 type ContainerMetricType = string
 
+// ContainerMetricKind Kind alias
+type ContainerMetricKind = string
+
 // NodeMetricType Type alias
 type NodeMetricType = string
+
+type NodeMetricKind = string
 
 const (
 	// TypeContainerCPUUsageSecondsPercentage Metric type of container cpu usage
@@ -26,6 +31,16 @@ const (
 	TypeNodeMemoryAvailableBytes NodeMetricType = "node_memory_available_bytes"
 	// TypeNodeMemoryUsageBytes Metric type of memory usage
 	TypeNodeMemoryUsageBytes NodeMetricType = "node_memory_usage_bytes"
+)
+
+const (
+	ContainerMetricKindRaw        ContainerMetricKind = "raw"
+	ContainerMetricKindUpperbound ContainerMetricKind = "upper_bound"
+	ContainerMetricKindLowerbound ContainerMetricKind = "lower_bound"
+
+	NodeMetricKindRaw        NodeMetricKind = "raw"
+	NodeMetricKindUpperbound NodeMetricKind = "upper_bound"
+	NodeMetricKindLowerbound NodeMetricKind = "lower_bound"
 )
 
 var (
